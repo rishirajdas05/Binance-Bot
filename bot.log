@@ -1,0 +1,659 @@
+$env:BINANCE_API_KEY2026-04-19 20:37:12 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-19 20:37:13 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:37:13 | DEBUG    | validator | Side validated: BUY
+2026-04-19 20:37:13 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:37:13 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 20:37:13 | ERROR    | client | BINANCE_API_KEY and BINANCE_API_SECRET must be set as environment variables.
+2026-04-19 20:37:13 | CRITICAL | bot | Fatal error: Missing API credentials. Export BINANCE_API_KEY and BINANCE_API_SECRET.
+2026-04-19 20:38:47 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-19 20:38:48 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:38:48 | DEBUG    | validator | Side validated: BUY
+2026-04-19 20:38:48 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:38:48 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 20:38:48 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-19 20:38:49 | ERROR    | market_orders | Market order FAILED | Symbol: BTCUSDT | Side: BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action', {'Content-Type': 'application/json', 'Content-Length': '69', 'Connection': 'keep-alive', 'Date': 'Sun, 19 Apr 2026 15:08:48 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '1ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4da7673e847e4fe66842083693a9c2e0.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '7Iwy81A_jrID0lc2Cp9QcuaQNex0c7Q75MQ0ehwxgZ-yr8FwDqEHcQ=='})
+2026-04-19 20:38:49 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action', {'Content-Type': 'application/json', 'Content-Length': '69', 'Connection': 'keep-alive', 'Date': 'Sun, 19 Apr 2026 15:08:48 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '1ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4da7673e847e4fe66842083693a9c2e0.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '7Iwy81A_jrID0lc2Cp9QcuaQNex0c7Q75MQ0ehwxgZ-yr8FwDqEHcQ=='})
+2026-04-19 20:41:39 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-19 20:41:40 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:41:40 | DEBUG    | validator | Side validated: BUY
+2026-04-19 20:41:40 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:41:40 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 20:41:40 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-19 20:41:43 | ERROR    | market_orders | Market order FAILED | Symbol: BTCUSDT | Side: BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action', {'Date': 'Sun, 19 Apr 2026 15:11:42 GMT', 'Content-Type': 'application/json', 'Content-Length': '69', 'Connection': 'keep-alive', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '1ms', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'})
+2026-04-19 20:41:43 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action', {'Date': 'Sun, 19 Apr 2026 15:11:42 GMT', 'Content-Type': 'application/json', 'Content-Length': '69', 'Connection': 'keep-alive', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '1ms', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'})
+2026-04-19 20:43:17 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-19 20:43:18 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:43:18 | DEBUG    | validator | Side validated: BUY
+2026-04-19 20:43:18 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:43:18 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 20:43:18 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:43:19 | ERROR    | market_orders | Market order FAILED | Symbol: BTCUSDT | Side: BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action', {'Date': 'Sun, 19 Apr 2026 15:13:18 GMT', 'Content-Type': 'application/json', 'Content-Length': '69', 'Connection': 'keep-alive', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '1ms', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'})
+2026-04-19 20:43:19 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action', {'Date': 'Sun, 19 Apr 2026 15:13:18 GMT', 'Content-Type': 'application/json', 'Content-Length': '69', 'Connection': 'keep-alive', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '1ms', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'})
+2026-04-19 20:46:28 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-19 20:46:29 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:46:29 | DEBUG    | validator | Side validated: BUY
+2026-04-19 20:46:29 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:46:29 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 20:46:29 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:46:30 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 20:46:30 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 20:48:32 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-19 20:48:33 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:48:33 | DEBUG    | validator | Side validated: BUY
+2026-04-19 20:48:33 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:48:33 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 20:48:33 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:48:34 | INFO     | client | Order response: {'orderId': 13050494518, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'fY8FbFqerFJGgYYV1dcMJI', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776611913475}
+2026-04-19 20:48:34 | INFO     | market_orders | Market order filled | OrderID: 13050494518 | Status: NEW | AvgPrice: 0.00 | FilledQty: 0.0000
+2026-04-19 20:49:08 | INFO     | bot | Bot command: limit | Args: {'command': 'limit', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01, 'price': 80000.0, 'time_in_force': 'GTC'}
+2026-04-19 20:49:09 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:49:09 | DEBUG    | validator | Side validated: BUY
+2026-04-19 20:49:09 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:49:09 | DEBUG    | validator | Limit price validated: 80000.0
+2026-04-19 20:49:09 | INFO     | limit_orders | Placing LIMIT BUY | Symbol: BTCUSDT | Qty: 0.01 | Price: 80000.0 | TIF: GTC
+2026-04-19 20:49:09 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:10 | ERROR    | limit_orders | Limit order FAILED | BTCUSDT BUY @ 80000.0 | Error: (400, -4016, 'Limit price can't be higher than 79893.70.')
+2026-04-19 20:49:10 | CRITICAL | bot | Fatal error: (400, -4016, 'Limit price can't be higher than 79893.70.')
+2026-04-19 20:49:18 | INFO     | bot | Bot command: stop | Args: {'command': 'stop', 'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.01, 'stop_price': 80000.0, 'limit_price': 79000.0}
+2026-04-19 20:49:19 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:49:19 | DEBUG    | validator | Side validated: SELL
+2026-04-19 20:49:19 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:49:19 | DEBUG    | validator | Stop price validated: 80000.0
+2026-04-19 20:49:19 | DEBUG    | validator | Limit price validated: 79000.0
+2026-04-19 20:49:19 | DEBUG    | validator | Stop-limit cross-validation passed: stop=80000.0, limit=79000.0, side=SELL
+2026-04-19 20:49:19 | INFO     | stop_limit | Placing STOP_LIMIT SELL | Symbol: BTCUSDT | Qty: 0.01 | StopPrice: 80000.0 | LimitPrice: 79000.0 | TIF: GTC
+2026-04-19 20:49:19 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:20 | ERROR    | stop_limit | Stop-limit FAILED | BTCUSDT SELL | Error: (400, -4120, 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.')
+2026-04-19 20:49:20 | CRITICAL | bot | Fatal error: (400, -4120, 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.')
+2026-04-19 20:49:25 | INFO     | bot | Bot command: oco | Args: {'command': 'oco', 'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.01, 'take_profit': 110000.0, 'stop_price': 80000.0, 'stop_limit_price': 79000.0}
+2026-04-19 20:49:25 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:49:25 | DEBUG    | validator | Side validated: SELL
+2026-04-19 20:49:25 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 20:49:25 | DEBUG    | validator | Take-profit price validated: 110000.0
+2026-04-19 20:49:25 | DEBUG    | validator | Stop price validated: 80000.0
+2026-04-19 20:49:25 | DEBUG    | validator | Stop limit price validated: 79000.0
+2026-04-19 20:49:25 | INFO     | oco | Placing OCO SELL | BTCUSDT | Qty: 0.01 | TP: 110000.0 | Stop: 80000.0 | StopLimit: 79000.0
+2026-04-19 20:49:25 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:27 | INFO     | client | Order response: {'orderId': 13050499154, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'HZEzpoyrfc0Fx2mcOE1gMo', 'price': '110000.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': True, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776611966311}
+2026-04-19 20:49:27 | INFO     | oco | OCO TP leg placed | OrderID: 13050499154 @ 110000.0
+2026-04-19 20:49:27 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:28 | ERROR    | oco | OCO SL leg FAILED. Rolling back TP. Error: (400, -4120, 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.')
+2026-04-19 20:49:29 | WARNING  | oco | TP order 13050499154 rolled back.
+2026-04-19 20:49:29 | CRITICAL | bot | Fatal error: (400, -4120, 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.')
+2026-04-19 20:49:35 | INFO     | bot | Bot command: twap | Args: {'command': 'twap', 'symbol': 'BTCUSDT', 'side': 'BUY', 'total_quantity': 0.05, 'intervals': 5, 'interval_seconds': 10}
+2026-04-19 20:49:35 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:49:35 | DEBUG    | validator | Side validated: BUY
+2026-04-19 20:49:35 | DEBUG    | validator | TWAP params validated: qty=0.05, intervals=5, every=10s
+2026-04-19 20:49:35 | INFO     | twap | TWAP initialized | BTCUSDT BUY | Total: 0.05 | Intervals: 5 | ChildQty: 0.01 | Every: 10s
+2026-04-19 20:49:35 | INFO     | twap | TWAP starting — 5 child orders.
+2026-04-19 20:49:35 | INFO     | twap | TWAP [1/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 20:49:35 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:36 | INFO     | client | Order response: {'orderId': 13050499469, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'cj4Ymevsn9CWacv4Wrntrt', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776611976054}
+2026-04-19 20:49:42 | WARNING  | bot | Bot interrupted by user (Ctrl+C).
+2026-04-19 20:49:48 | INFO     | bot | Bot command: grid | Args: {'command': 'grid', 'symbol': 'BTCUSDT', 'lower_price': 80000.0, 'upper_price': 90000.0, 'grids': 5, 'quantity_per_grid': 0.001}
+2026-04-19 20:49:48 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 20:49:48 | DEBUG    | validator | Grid params validated: lower=80000.0, upper=90000.0, grids=5, qty=0.001
+2026-04-19 20:49:48 | INFO     | grid_strategy | Grid initialized | BTCUSDT | 80000.0–90000.0 | Grids: 5 | Step: 2000.00 | Levels: [80000.0, 82000.0, 84000.0, 86000.0, 88000.0, 90000.0]
+2026-04-19 20:49:49 | INFO     | grid_strategy | Mark price: 76016.67318841
+2026-04-19 20:49:49 | INFO     | grid_strategy | Initializing grid | CurrentPrice: 76016.67318841
+2026-04-19 20:49:49 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:50 | INFO     | client | Order response: {'orderId': 13050500270, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '2K0UxBzg086gLpEGFNYrzN', 'price': '82000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776611990070}
+2026-04-19 20:49:50 | INFO     | grid_strategy | Grid order | SELL @ 82000.0 | Level: 1 | OrderID: 13050500270
+2026-04-19 20:49:50 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:52 | INFO     | client | Order response: {'orderId': 13050500321, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'h9l6zwzzFaFU7Nwsb9QdmZ', 'price': '84000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776611991196}
+2026-04-19 20:49:52 | INFO     | grid_strategy | Grid order | SELL @ 84000.0 | Level: 2 | OrderID: 13050500321
+2026-04-19 20:49:52 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:53 | INFO     | client | Order response: {'orderId': 13050500351, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ZnrXXchRFseBQn863E5foV', 'price': '86000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776611992323}
+2026-04-19 20:49:53 | INFO     | grid_strategy | Grid order | SELL @ 86000.0 | Level: 3 | OrderID: 13050500351
+2026-04-19 20:49:53 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:54 | INFO     | client | Order response: {'orderId': 13050500388, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'xrmQeft77jsExMpTsfub2D', 'price': '88000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776611993448}
+2026-04-19 20:49:54 | INFO     | grid_strategy | Grid order | SELL @ 88000.0 | Level: 4 | OrderID: 13050500388
+2026-04-19 20:49:54 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 20:49:55 | INFO     | client | Order response: {'orderId': 13050500461, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'sRkzReK0cNIbgi4vff44oL', 'price': '90000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776611994579}
+2026-04-19 20:49:55 | INFO     | grid_strategy | Grid order | SELL @ 90000.0 | Level: 5 | OrderID: 13050500461
+2026-04-19 20:49:55 | INFO     | grid_strategy | Grid ready with 5 orders.
+2026-04-19 20:49:55 | INFO     | grid_strategy | Grid running. Press Ctrl+C to stop.
+2026-04-19 20:49:59 | WARNING  | bot | Bot interrupted by user (Ctrl+C).
+2026-04-19 21:13:16 | INFO     | bot | Bot command: limit | Args: {'command': 'limit', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01, 'price': 75000.0, 'time_in_force': 'GTC'}
+2026-04-19 21:13:16 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:13:16 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:13:16 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:13:16 | DEBUG    | validator | Limit price validated: 75000.0
+2026-04-19 21:13:16 | INFO     | limit_orders | Placing LIMIT BUY | Symbol: BTCUSDT | Qty: 0.01 | Price: 75000.0 | TIF: GTC
+2026-04-19 21:13:16 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:13:18 | INFO     | client | Order response: {'orderId': 13050564596, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'RY2B5qX2zyFUqQZxKMRYpS', 'price': '75000.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613397355}
+2026-04-19 21:13:18 | INFO     | limit_orders | Limit order placed | OrderID: 13050564596 | Status: NEW | Price: 75000.00
+2026-04-19 21:13:18 | INFO     | bot | Bot command: stop | Args: {'command': 'stop', 'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.01, 'stop_price': 76000.0, 'limit_price': 75000.0}
+2026-04-19 21:13:19 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:13:19 | DEBUG    | validator | Side validated: SELL
+2026-04-19 21:13:19 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:13:19 | DEBUG    | validator | Stop price validated: 76000.0
+2026-04-19 21:13:19 | DEBUG    | validator | Limit price validated: 75000.0
+2026-04-19 21:13:19 | DEBUG    | validator | Stop-limit cross-validation passed: stop=76000.0, limit=75000.0, side=SELL
+2026-04-19 21:13:19 | INFO     | stop_limit | Placing STOP_LIMIT SELL | Symbol: BTCUSDT | Qty: 0.01 | StopPrice: 76000.0 | LimitPrice: 75000.0 | TIF: GTC
+2026-04-19 21:13:19 | INFO     | client | Placing ALGO order via /fapi/v1/order/algo endpoint.
+2026-04-19 21:13:20 | ERROR    | stop_limit | Stop-limit FAILED | BTCUSDT SELL | Error: (404, -5000, 'Path /fapi/v1/order/algo, Method POST is invalid')
+2026-04-19 21:13:20 | CRITICAL | bot | Fatal error: (404, -5000, 'Path /fapi/v1/order/algo, Method POST is invalid')
+2026-04-19 21:13:20 | INFO     | bot | Bot command: oco | Args: {'command': 'oco', 'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.01, 'take_profit': 90000.0, 'stop_price': 74000.0, 'stop_limit_price': 73500.0}
+2026-04-19 21:13:20 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:13:20 | DEBUG    | validator | Side validated: SELL
+2026-04-19 21:13:20 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:13:20 | DEBUG    | validator | Take-profit price validated: 90000.0
+2026-04-19 21:13:20 | DEBUG    | validator | Stop price validated: 74000.0
+2026-04-19 21:13:20 | DEBUG    | validator | Stop limit price validated: 73500.0
+2026-04-19 21:13:20 | INFO     | oco | Placing OCO SELL | BTCUSDT | Qty: 0.01 | TP: 90000.0 | Stop: 74000.0 | StopLimit: 73500.0
+2026-04-19 21:13:20 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:13:22 | INFO     | client | Order response: {'orderId': 13050564733, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Rgudj5w0rqLvxomHcpl5v4', 'price': '90000.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': True, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613401362}
+2026-04-19 21:13:22 | INFO     | oco | OCO TP leg placed | OrderID: 13050564733 @ 90000.0
+2026-04-19 21:13:22 | INFO     | client | Placing ALGO order via /fapi/v1/order/algo endpoint.
+2026-04-19 21:13:23 | ERROR    | oco | OCO SL leg FAILED. Rolling back TP order. Error: (404, -5000, 'Path /fapi/v1/order/algo, Method POST is invalid')
+2026-04-19 21:13:24 | WARNING  | oco | TP order 13050564733 rolled back successfully.
+2026-04-19 21:13:24 | CRITICAL | bot | Fatal error: (404, -5000, 'Path /fapi/v1/order/algo, Method POST is invalid')
+2026-04-19 21:13:25 | INFO     | bot | Bot command: twap | Args: {'command': 'twap', 'symbol': 'BTCUSDT', 'side': 'BUY', 'total_quantity': 0.05, 'intervals': 5, 'interval_seconds': 10}
+2026-04-19 21:13:26 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:13:26 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:13:26 | DEBUG    | validator | TWAP params validated: qty=0.05, intervals=5, every=10s
+2026-04-19 21:13:26 | INFO     | twap | TWAP initialized | BTCUSDT BUY | Total: 0.05 | Intervals: 5 | ChildQty: 0.01 | Every: 10s | Duration: 50s
+2026-04-19 21:13:26 | INFO     | twap | TWAP starting | 5 child orders to place.
+2026-04-19 21:13:26 | INFO     | twap | TWAP [1/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:13:26 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:13:27 | INFO     | client | Order response: {'orderId': 13050564954, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'LC7cLXu0QB8IMeBTloU5rK', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613406586}
+2026-04-19 21:13:27 | INFO     | twap |   [OK] OrderID: 13050564954 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:13:27 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:13:37 | INFO     | twap | TWAP [2/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:13:37 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:13:38 | INFO     | client | Order response: {'orderId': 13050565380, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'a3s2bWwuwlYjoAQrK3m0cI', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613417848}
+2026-04-19 21:13:38 | INFO     | twap |   [OK] OrderID: 13050565380 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:13:38 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:13:48 | INFO     | twap | TWAP [3/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:13:48 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:13:49 | INFO     | client | Order response: {'orderId': 13050565773, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'qWtgVfp4Ob68SUU6haG4u8', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613429204}
+2026-04-19 21:13:49 | INFO     | twap |   [OK] OrderID: 13050565773 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:13:49 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:13:59 | INFO     | twap | TWAP [4/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:13:59 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:14:01 | INFO     | client | Order response: {'orderId': 13050566220, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'PIN5Da0fB1tAkm0EkUjGVX', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613440475}
+2026-04-19 21:14:01 | INFO     | twap |   [OK] OrderID: 13050566220 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:14:01 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:14:11 | INFO     | twap | TWAP [5/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:14:11 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:14:12 | INFO     | client | Order response: {'orderId': 13050566790, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '724sA8lnxhjcV0qjqKCZCV', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613451742}
+2026-04-19 21:14:12 | INFO     | twap |   [OK] OrderID: 13050566790 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:14:12 | INFO     | twap | TWAP complete | ExecutedQty: 0.0 | AvgFill: 0.0 | Failed: 0
+2026-04-19 21:15:52 | INFO     | bot | Bot command: stop | Args: {'command': 'stop', 'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.01, 'stop_price': 76000.0, 'limit_price': 75000.0}
+2026-04-19 21:15:53 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:15:53 | DEBUG    | validator | Side validated: SELL
+2026-04-19 21:15:53 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:15:53 | DEBUG    | validator | Stop price validated: 76000.0
+2026-04-19 21:15:53 | DEBUG    | validator | Limit price validated: 75000.0
+2026-04-19 21:15:53 | DEBUG    | validator | Stop-limit cross-validation passed: stop=76000.0, limit=75000.0, side=SELL
+2026-04-19 21:15:53 | INFO     | stop_limit | Placing STOP_LIMIT SELL | Symbol: BTCUSDT | Qty: 0.01 | StopPrice: 76000.0 | LimitPrice: 75000.0 | TIF: GTC
+2026-04-19 21:15:53 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:15:54 | ERROR    | stop_limit | Stop-limit FAILED | BTCUSDT SELL | Error: (400, -4120, 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.')
+2026-04-19 21:15:54 | CRITICAL | bot | Fatal error: (400, -4120, 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.')
+2026-04-19 21:15:56 | INFO     | bot | Bot command: oco | Args: {'command': 'oco', 'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.01, 'take_profit': 90000.0, 'stop_price': 74000.0, 'stop_limit_price': 73500.0}
+2026-04-19 21:15:56 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:15:56 | DEBUG    | validator | Side validated: SELL
+2026-04-19 21:15:56 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:15:56 | DEBUG    | validator | Take-profit price validated: 90000.0
+2026-04-19 21:15:56 | DEBUG    | validator | Stop price validated: 74000.0
+2026-04-19 21:15:56 | DEBUG    | validator | Stop limit price validated: 73500.0
+2026-04-19 21:15:56 | INFO     | oco | Placing OCO SELL | BTCUSDT | Qty: 0.01 | TP: 90000.0 | Stop: 74000.0 | StopLimit: 73500.0
+2026-04-19 21:15:56 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:15:59 | INFO     | client | Order response: {'orderId': 13050571048, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'YqidLHuNQ2hgv0QVz2Yw2S', 'price': '90000.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': True, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613558635}
+2026-04-19 21:15:59 | INFO     | oco | OCO TP leg placed | OrderID: 13050571048 @ 90000.0
+2026-04-19 21:15:59 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:16:00 | ERROR    | oco | OCO SL leg FAILED. Rolling back TP order. Error: (400, -4120, 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.')
+2026-04-19 21:16:01 | WARNING  | oco | TP order 13050571048 rolled back successfully.
+2026-04-19 21:16:01 | CRITICAL | bot | Fatal error: (400, -4120, 'Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.')
+2026-04-19 21:18:54 | INFO     | bot | Bot command: stop | Args: {'command': 'stop', 'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.01, 'stop_price': 76000.0, 'limit_price': 75000.0}
+2026-04-19 21:18:55 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:18:55 | DEBUG    | validator | Side validated: SELL
+2026-04-19 21:18:55 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:18:55 | DEBUG    | validator | Stop price validated: 76000.0
+2026-04-19 21:18:55 | DEBUG    | validator | Limit price validated: 75000.0
+2026-04-19 21:18:55 | DEBUG    | validator | Stop-limit cross-validation passed: stop=76000.0, limit=75000.0, side=SELL
+2026-04-19 21:18:55 | INFO     | stop_limit | Stop-limit MONITOR started | SELL BTCUSDT | Qty: 0.01 | StopPrice: 76000.0 | LimitPrice: 75000.0 | Polling every 3s
+2026-04-19 21:18:56 | DEBUG    | stop_limit | Mark price: 75779.31764493 | Waiting for stop: 76000.0
+2026-04-19 21:18:56 | INFO     | stop_limit | Stop TRIGGERED | MarkPrice: 75779.31764493 crossed 76000.0 | Placing LIMIT SELL @ 75000.0
+2026-04-19 21:18:56 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:18:58 | INFO     | client | Order response: {'orderId': 13050579941, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'UQXweIszo7f6zXZgmDP940', 'price': '75000.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613737333}
+2026-04-19 21:18:58 | INFO     | stop_limit | Stop-limit triggered & filled | OrderID: 13050579941 | Status: NEW | Price: 75000.0
+2026-04-19 21:18:59 | INFO     | bot | Bot command: oco | Args: {'command': 'oco', 'symbol': 'BTCUSDT', 'side': 'SELL', 'quantity': 0.01, 'take_profit': 90000.0, 'stop_price': 74000.0, 'stop_limit_price': 73500.0}
+2026-04-19 21:18:59 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:18:59 | DEBUG    | validator | Side validated: SELL
+2026-04-19 21:18:59 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:18:59 | DEBUG    | validator | Take-profit price validated: 90000.0
+2026-04-19 21:18:59 | DEBUG    | validator | Stop price validated: 74000.0
+2026-04-19 21:18:59 | DEBUG    | validator | Stop limit price validated: 73500.0
+2026-04-19 21:18:59 | INFO     | oco | Placing OCO SELL | BTCUSDT | Qty: 0.01 | TP: 90000.0 | Stop: 74000.0 | StopLimit: 73500.0
+2026-04-19 21:18:59 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:19:01 | INFO     | client | Order response: {'orderId': 13050580106, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'NDVpCL3MZ8KfIISC6tpAot', 'price': '90000.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': True, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776613740515}
+2026-04-19 21:19:01 | INFO     | oco | OCO TP leg placed | OrderID: 13050580106 @ 90000.0
+2026-04-19 21:19:01 | INFO     | oco | OCO SL monitor started | Watching for price cross @ 74000.0
+2026-04-19 21:19:01 | INFO     | oco | OCO TP fill monitor started | OrderID: 13050580106
+2026-04-19 21:19:01 | INFO     | oco | OCO active | TP_ID: 13050580106 | SL watching for price @ 74000.0 | Press Ctrl+C to cancel.
+2026-04-19 21:19:01 | INFO     | bot | OCO active. Waiting for TP fill or SL trigger. Press Ctrl+C to cancel.
+2026-04-19 21:19:02 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:02 | DEBUG    | oco | OCO SL poll | MarkPrice: 75777.54954545 | StopAt: 74000.0
+2026-04-19 21:19:06 | DEBUG    | oco | OCO SL poll | MarkPrice: 75776.69280632 | StopAt: 74000.0
+2026-04-19 21:19:06 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:11 | DEBUG    | oco | OCO SL poll | MarkPrice: 75794.6 | StopAt: 74000.0
+2026-04-19 21:19:11 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:15 | DEBUG    | oco | OCO SL poll | MarkPrice: 75794.5 | StopAt: 74000.0
+2026-04-19 21:19:15 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:20 | DEBUG    | oco | OCO SL poll | MarkPrice: 75789.41686594 | StopAt: 74000.0
+2026-04-19 21:19:20 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:24 | DEBUG    | oco | OCO SL poll | MarkPrice: 75779.74273551 | StopAt: 74000.0
+2026-04-19 21:19:24 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:28 | DEBUG    | oco | OCO SL poll | MarkPrice: 75776.6 | StopAt: 74000.0
+2026-04-19 21:19:28 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:33 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:33 | DEBUG    | oco | OCO SL poll | MarkPrice: 75776.6 | StopAt: 74000.0
+2026-04-19 21:19:37 | DEBUG    | oco | OCO SL poll | MarkPrice: 75773.52641304 | StopAt: 74000.0
+2026-04-19 21:19:37 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:41 | DEBUG    | oco | OCO SL poll | MarkPrice: 75795.4 | StopAt: 74000.0
+2026-04-19 21:19:44 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:46 | DEBUG    | oco | OCO SL poll | MarkPrice: 75798.78567029 | StopAt: 74000.0
+2026-04-19 21:19:49 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:50 | DEBUG    | oco | OCO SL poll | MarkPrice: 75799.39806159 | StopAt: 74000.0
+2026-04-19 21:19:53 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:54 | DEBUG    | oco | OCO SL poll | MarkPrice: 75805.71166667 | StopAt: 74000.0
+2026-04-19 21:19:57 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:19:58 | DEBUG    | oco | OCO SL poll | MarkPrice: 75810.81041667 | StopAt: 74000.0
+2026-04-19 21:20:01 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:03 | DEBUG    | oco | OCO SL poll | MarkPrice: 75810.4309058 | StopAt: 74000.0
+2026-04-19 21:20:06 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:07 | DEBUG    | oco | OCO SL poll | MarkPrice: 75811.04873188 | StopAt: 74000.0
+2026-04-19 21:20:10 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:12 | DEBUG    | oco | OCO SL poll | MarkPrice: 75811.72434783 | StopAt: 74000.0
+2026-04-19 21:20:14 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:16 | DEBUG    | oco | OCO SL poll | MarkPrice: 75812.67990942 | StopAt: 74000.0
+2026-04-19 21:20:18 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:20 | DEBUG    | oco | OCO SL poll | MarkPrice: 75813.16664855 | StopAt: 74000.0
+2026-04-19 21:20:22 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:25 | DEBUG    | oco | OCO SL poll | MarkPrice: 75816.0 | StopAt: 74000.0
+2026-04-19 21:20:27 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:29 | DEBUG    | oco | OCO SL poll | MarkPrice: 75790.55322464 | StopAt: 74000.0
+2026-04-19 21:20:31 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:34 | DEBUG    | oco | OCO SL poll | MarkPrice: 75765.31768116 | StopAt: 74000.0
+2026-04-19 21:20:35 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:38 | DEBUG    | oco | OCO SL poll | MarkPrice: 75763.43811594 | StopAt: 74000.0
+2026-04-19 21:20:40 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:42 | DEBUG    | oco | OCO SL poll | MarkPrice: 75759.48695652 | StopAt: 74000.0
+2026-04-19 21:20:44 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:46 | DEBUG    | oco | OCO SL poll | MarkPrice: 75756.38644928 | StopAt: 74000.0
+2026-04-19 21:20:48 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:50 | DEBUG    | oco | OCO SL poll | MarkPrice: 75702.18166667 | StopAt: 74000.0
+2026-04-19 21:20:53 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:54 | DEBUG    | oco | OCO SL poll | MarkPrice: 75703.08748188 | StopAt: 74000.0
+2026-04-19 21:20:57 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:20:58 | DEBUG    | oco | OCO SL poll | MarkPrice: 75700.3 | StopAt: 74000.0
+2026-04-19 21:21:01 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:21:03 | DEBUG    | oco | OCO SL poll | MarkPrice: 75704.1 | StopAt: 74000.0
+2026-04-19 21:21:05 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:21:07 | DEBUG    | oco | OCO SL poll | MarkPrice: 75709.8 | StopAt: 74000.0
+2026-04-19 21:21:10 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:21:11 | DEBUG    | oco | OCO SL poll | MarkPrice: 75713.4 | StopAt: 74000.0
+2026-04-19 21:21:14 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:21:15 | DEBUG    | oco | OCO SL poll | MarkPrice: 75702.47422101 | StopAt: 74000.0
+2026-04-19 21:21:18 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:21:19 | DEBUG    | oco | OCO SL poll | MarkPrice: 75698.8 | StopAt: 74000.0
+2026-04-19 21:21:22 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:21:23 | DEBUG    | oco | OCO SL poll | MarkPrice: 75699.8 | StopAt: 74000.0
+2026-04-19 21:21:26 | DEBUG    | oco | OCO TP status: NEW
+2026-04-19 21:21:28 | DEBUG    | oco | OCO SL poll | MarkPrice: 75699.8 | StopAt: 74000.0
+2026-04-19 21:33:35 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:33:35 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:33:35 | DEBUG    | validator | TWAP params validated: qty=0.05, intervals=5, every=10s
+2026-04-19 21:33:35 | INFO     | twap | TWAP initialized | BTCUSDT BUY | Total: 0.05 | Intervals: 5 | ChildQty: 0.01 | Every: 10s | Duration: 50s
+2026-04-19 21:33:35 | INFO     | twap | TWAP starting | 5 child orders to place.
+2026-04-19 21:33:35 | INFO     | twap | TWAP [1/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:33:35 | ERROR    | twap |   [FAIL] Child order 1 FAILED: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-19 21:33:35 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:33:45 | INFO     | twap | TWAP [2/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:33:45 | ERROR    | twap |   [FAIL] Child order 2 FAILED: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-19 21:33:45 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:33:48 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:33:48 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:33:48 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:33:48 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 21:33:48 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-19 21:33:55 | INFO     | twap | TWAP [3/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:33:55 | ERROR    | twap |   [FAIL] Child order 3 FAILED: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-19 21:33:55 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:34:05 | INFO     | twap | TWAP [4/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:34:05 | ERROR    | twap |   [FAIL] Child order 4 FAILED: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-19 21:34:05 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:34:15 | INFO     | twap | TWAP [5/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:34:15 | ERROR    | twap |   [FAIL] Child order 5 FAILED: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-19 21:34:15 | INFO     | twap | TWAP complete | ExecutedQty: 0.0 | AvgFill: 0.0 | Failed: 5
+2026-04-19 21:39:58 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:39:58 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:39:58 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:39:58 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 21:39:58 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:39:59 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:07 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:40:07 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:40:07 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:40:07 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 21:40:07 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:09 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:23 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:40:23 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:40:23 | DEBUG    | validator | TWAP params validated: qty=0.05, intervals=5, every=10s
+2026-04-19 21:40:23 | INFO     | twap | TWAP initialized | BTCUSDT BUY | Total: 0.05 | Intervals: 5 | ChildQty: 0.01 | Every: 10s | Duration: 50s
+2026-04-19 21:40:23 | INFO     | twap | TWAP starting | 5 child orders to place.
+2026-04-19 21:40:23 | INFO     | twap | TWAP [1/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:40:23 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:24 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:40:24 | DEBUG    | validator | Grid params validated: lower=74000.0, upper=80000.0, grids=5, qty=0.001
+2026-04-19 21:40:24 | INFO     | grid_strategy | Grid initialized | BTCUSDT | 74000.0–80000.0 | Grids: 5 | Step: 1200.00 | Levels: [74000.0, 75200.0, 76400.0, 77600.0, 78800.0, 80000.0]
+2026-04-19 21:40:24 | ERROR    | twap |   [FAIL] Child order 1 FAILED: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:24 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:40:25 | INFO     | grid_strategy | Mark price: 75611.9
+2026-04-19 21:40:25 | INFO     | grid_strategy | Initializing grid | CurrentPrice: 75611.9
+2026-04-19 21:40:25 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:26 | ERROR    | grid_strategy | Failed to place grid BUY @ 74000.0: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:26 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:27 | ERROR    | grid_strategy | Failed to place grid BUY @ 75200.0: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:27 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:28 | ERROR    | grid_strategy | Failed to place grid SELL @ 76400.0: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:28 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:29 | ERROR    | grid_strategy | Failed to place grid SELL @ 77600.0: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:29 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:30 | ERROR    | grid_strategy | Failed to place grid SELL @ 78800.0: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:30 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:31 | ERROR    | grid_strategy | Failed to place grid SELL @ 80000.0: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:31 | INFO     | grid_strategy | Grid ready with 0 orders.
+2026-04-19 21:40:31 | INFO     | grid_strategy | Grid running. Press Ctrl+C to stop.
+2026-04-19 21:40:34 | INFO     | twap | TWAP [2/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:40:34 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:36 | ERROR    | twap |   [FAIL] Child order 2 FAILED: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:36 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:40:46 | INFO     | twap | TWAP [3/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:40:46 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:47 | ERROR    | twap |   [FAIL] Child order 3 FAILED: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:47 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:40:57 | INFO     | twap | TWAP [4/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:40:57 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:40:58 | ERROR    | twap |   [FAIL] Child order 4 FAILED: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:40:58 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:41:08 | INFO     | twap | TWAP [5/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:41:08 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:41:09 | ERROR    | twap |   [FAIL] Child order 5 FAILED: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-19 21:41:09 | INFO     | twap | TWAP complete | ExecutedQty: 0.0 | AvgFill: 0.0 | Failed: 5
+2026-04-19 21:44:52 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:44:52 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:44:52 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:44:52 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 21:44:52 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:44:53 | INFO     | client | Order response: {'orderId': 13050661635, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '1yboxfYy5cDT4Ie4WZGsrS', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615292599}
+2026-04-19 21:44:53 | INFO     | market_orders | Market order filled | OrderID: 13050661635 | Status: NEW | AvgPrice: 0.00 | FilledQty: 0.0000
+2026-04-19 21:44:58 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:44:58 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:44:58 | DEBUG    | validator | TWAP params validated: qty=0.05, intervals=5, every=10s
+2026-04-19 21:44:58 | INFO     | twap | TWAP initialized | BTCUSDT BUY | Total: 0.05 | Intervals: 5 | ChildQty: 0.01 | Every: 10s | Duration: 50s
+2026-04-19 21:44:58 | INFO     | twap | TWAP starting | 5 child orders to place.
+2026-04-19 21:44:58 | INFO     | twap | TWAP [1/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:44:58 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:44:59 | INFO     | client | Order response: {'orderId': 13050661970, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 's51yWoqrYIbut68kxBpJOd', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615298759}
+2026-04-19 21:44:59 | INFO     | twap |   [OK] OrderID: 13050661970 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:44:59 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:45:04 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:45:04 | DEBUG    | validator | Grid params validated: lower=74000.0, upper=80000.0, grids=5, qty=0.001
+2026-04-19 21:45:04 | INFO     | grid_strategy | Grid initialized | BTCUSDT | 74000.0–80000.0 | Grids: 5 | Step: 1200.00 | Levels: [74000.0, 75200.0, 76400.0, 77600.0, 78800.0, 80000.0]
+2026-04-19 21:45:05 | INFO     | grid_strategy | Mark price: 75624.7
+2026-04-19 21:45:05 | INFO     | grid_strategy | Initializing grid | CurrentPrice: 75624.7
+2026-04-19 21:45:05 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:06 | INFO     | client | Order response: {'orderId': 13050662372, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'TSwkfBAmgXuwD9rqgL32cP', 'price': '74000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615306001}
+2026-04-19 21:45:06 | INFO     | grid_strategy | Grid order | BUY @ 74000.0 | Level: 0 | OrderID: 13050662372
+2026-04-19 21:45:06 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:07 | INFO     | client | Order response: {'orderId': 13050662437, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'r2m2mkY73FtOms7M1MoO9I', 'price': '75200.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615307237}
+2026-04-19 21:45:07 | INFO     | grid_strategy | Grid order | BUY @ 75200.0 | Level: 1 | OrderID: 13050662437
+2026-04-19 21:45:07 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:09 | INFO     | client | Order response: {'orderId': 13050662501, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'i7lniNhz5A0czVC4pbbli1', 'price': '76400.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615308464}
+2026-04-19 21:45:09 | INFO     | grid_strategy | Grid order | SELL @ 76400.0 | Level: 2 | OrderID: 13050662501
+2026-04-19 21:45:09 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:09 | INFO     | twap | TWAP [2/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:45:09 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:10 | INFO     | client | Order response: {'orderId': 13050662594, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'B3He2hsePPXyHZFQCTiUqZ', 'price': '77600.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615309794}
+2026-04-19 21:45:10 | INFO     | grid_strategy | Grid order | SELL @ 77600.0 | Level: 3 | OrderID: 13050662594
+2026-04-19 21:45:10 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:10 | INFO     | client | Order response: {'orderId': 13050662611, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Y2jtpHKPLqgya3dHQnVZ4r', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615310100}
+2026-04-19 21:45:10 | INFO     | twap |   [OK] OrderID: 13050662611 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:45:10 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:45:11 | INFO     | client | Order response: {'orderId': 13050662666, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ex9idAaKe0dzvN1GKK56mo', 'price': '78800.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615311029}
+2026-04-19 21:45:11 | INFO     | grid_strategy | Grid order | SELL @ 78800.0 | Level: 4 | OrderID: 13050662666
+2026-04-19 21:45:11 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:12 | INFO     | client | Order response: {'orderId': 13050662729, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'R0HwUlVF8A6L7mtaIW8ApG', 'price': '80000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615312144}
+2026-04-19 21:45:12 | INFO     | grid_strategy | Grid order | SELL @ 80000.0 | Level: 5 | OrderID: 13050662729
+2026-04-19 21:45:12 | INFO     | grid_strategy | Grid ready with 6 orders.
+2026-04-19 21:45:12 | INFO     | grid_strategy | Grid running. Press Ctrl+C to stop.
+2026-04-19 21:45:17 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:45:17 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:45:17 | DEBUG    | validator | TWAP params validated: qty=0.05, intervals=5, every=10s
+2026-04-19 21:45:17 | INFO     | twap | TWAP initialized | BTCUSDT BUY | Total: 0.05 | Intervals: 5 | ChildQty: 0.01 | Every: 10s | Duration: 50s
+2026-04-19 21:45:17 | INFO     | twap | TWAP starting | 5 child orders to place.
+2026-04-19 21:45:17 | INFO     | twap | TWAP [1/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:45:17 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:19 | INFO     | client | Order response: {'orderId': 13050663099, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'SdTICXswl2fLj15K2WDvfe', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615318503}
+2026-04-19 21:45:19 | INFO     | twap |   [OK] OrderID: 13050663099 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:45:19 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:45:20 | INFO     | twap | TWAP [3/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:45:20 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:22 | INFO     | client | Order response: {'orderId': 13050663242, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'sL4g6U42vZD2YEQ4QqudKp', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615321370}
+2026-04-19 21:45:22 | INFO     | twap |   [OK] OrderID: 13050663242 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:45:22 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:45:29 | INFO     | twap | TWAP [2/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:45:29 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:30 | INFO     | client | Order response: {'orderId': 13050663592, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'c1AbGxrpFEpk3duDbJEDWB', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615329504}
+2026-04-19 21:45:30 | INFO     | twap |   [OK] OrderID: 13050663592 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:45:30 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:45:32 | INFO     | twap | TWAP [4/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:45:32 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:33 | INFO     | client | Order response: {'orderId': 13050663706, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'WFt1Mp73QkwH03GLhvutCn', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615332624}
+2026-04-19 21:45:33 | INFO     | twap |   [OK] OrderID: 13050663706 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:45:33 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:45:40 | INFO     | twap | TWAP [3/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:45:40 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:41 | INFO     | client | Order response: {'orderId': 13050664025, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'U3L5Ziblf1bupPYhsegIsL', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615340629}
+2026-04-19 21:45:41 | INFO     | twap |   [OK] OrderID: 13050664025 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:45:41 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:45:43 | INFO     | twap | TWAP [5/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:45:43 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:44 | INFO     | client | Order response: {'orderId': 13050664156, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'WJ8IP9Wss2kHD6mfdDM3Yr', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615343811}
+2026-04-19 21:45:44 | INFO     | twap |   [OK] OrderID: 13050664156 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:45:44 | INFO     | twap | TWAP complete | ExecutedQty: 0.0 | AvgFill: 0.0 | Failed: 0
+2026-04-19 21:45:51 | INFO     | twap | TWAP [4/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:45:51 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:45:52 | INFO     | client | Order response: {'orderId': 13050664461, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'UUT700SZzx4bx3bmB4IFqc', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615351668}
+2026-04-19 21:45:52 | INFO     | twap |   [OK] OrderID: 13050664461 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:45:52 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:46:02 | INFO     | twap | TWAP [5/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:46:02 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:46:03 | INFO     | client | Order response: {'orderId': 13050665071, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '8qqalGOqa6vqJwuMUr3fHH', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615362845}
+2026-04-19 21:46:03 | INFO     | twap |   [OK] OrderID: 13050665071 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:46:03 | INFO     | twap | TWAP complete | ExecutedQty: 0.0 | AvgFill: 0.0 | Failed: 0
+2026-04-19 21:48:00 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:48:00 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:48:00 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-19 21:48:00 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-19 21:48:00 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:01 | INFO     | client | Order response: {'orderId': 13050669792, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'wRfr4JPaifGCGpXqfBPOim', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615480617}
+2026-04-19 21:48:01 | INFO     | market_orders | Market order filled | OrderID: 13050669792 | Status: NEW | AvgPrice: 0.00 | FilledQty: 0.0000
+2026-04-19 21:48:19 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:48:19 | DEBUG    | validator | Grid params validated: lower=74000.0, upper=80000.0, grids=5, qty=0.001
+2026-04-19 21:48:19 | INFO     | grid_strategy | Grid initialized | BTCUSDT | 74000.0–80000.0 | Grids: 5 | Step: 1200.00 | Levels: [74000.0, 75200.0, 76400.0, 77600.0, 78800.0, 80000.0]
+2026-04-19 21:48:20 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-19 21:48:20 | DEBUG    | validator | Side validated: BUY
+2026-04-19 21:48:20 | DEBUG    | validator | TWAP params validated: qty=0.05, intervals=5, every=10s
+2026-04-19 21:48:20 | INFO     | twap | TWAP initialized | BTCUSDT BUY | Total: 0.05 | Intervals: 5 | ChildQty: 0.01 | Every: 10s | Duration: 50s
+2026-04-19 21:48:20 | INFO     | twap | TWAP starting | 5 child orders to place.
+2026-04-19 21:48:20 | INFO     | twap | TWAP [1/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:48:20 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:22 | INFO     | client | Order response: {'orderId': 13050670650, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'vtD47moLDCY8MvLIhoM0pg', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615501482}
+2026-04-19 21:48:22 | INFO     | twap |   [OK] OrderID: 13050670650 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:48:22 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:48:22 | INFO     | grid_strategy | Mark price: 75603.47695652
+2026-04-19 21:48:22 | INFO     | grid_strategy | Initializing grid | CurrentPrice: 75603.47695652
+2026-04-19 21:48:22 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:25 | INFO     | client | Order response: {'orderId': 13050670790, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'JFNUMbrqThO9tNzigx8BUq', 'price': '74000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615504540}
+2026-04-19 21:48:25 | INFO     | grid_strategy | Grid order | BUY @ 74000.0 | Level: 0 | OrderID: 13050670790
+2026-04-19 21:48:25 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:26 | INFO     | client | Order response: {'orderId': 13050670839, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '73yrFWQFXIaibY5MBc9VX7', 'price': '75200.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615505681}
+2026-04-19 21:48:26 | INFO     | grid_strategy | Grid order | BUY @ 75200.0 | Level: 1 | OrderID: 13050670839
+2026-04-19 21:48:26 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:27 | INFO     | client | Order response: {'orderId': 13050670878, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '1ArgXidsqSVDW5NIobChlk', 'price': '76400.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615506956}
+2026-04-19 21:48:27 | INFO     | grid_strategy | Grid order | SELL @ 76400.0 | Level: 2 | OrderID: 13050670878
+2026-04-19 21:48:27 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:28 | INFO     | client | Order response: {'orderId': 13050670924, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '8EdF9PDFP88cOrv6DRcFsM', 'price': '77600.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615508128}
+2026-04-19 21:48:28 | INFO     | grid_strategy | Grid order | SELL @ 77600.0 | Level: 3 | OrderID: 13050670924
+2026-04-19 21:48:28 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:31 | INFO     | client | Order response: {'orderId': 13050670983, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'YsMPdB2IDELpRSCMT63sjE', 'price': '78800.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615510626}
+2026-04-19 21:48:31 | INFO     | grid_strategy | Grid order | SELL @ 78800.0 | Level: 4 | OrderID: 13050670983
+2026-04-19 21:48:31 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:32 | INFO     | twap | TWAP [2/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:48:32 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:32 | INFO     | client | Order response: {'orderId': 13050671017, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'yr49FG41hRBoM01BemjTAJ', 'price': '80000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615511682}
+2026-04-19 21:48:32 | INFO     | grid_strategy | Grid order | SELL @ 80000.0 | Level: 5 | OrderID: 13050671017
+2026-04-19 21:48:32 | INFO     | grid_strategy | Grid ready with 6 orders.
+2026-04-19 21:48:32 | INFO     | grid_strategy | Grid running. Press Ctrl+C to stop.
+2026-04-19 21:48:33 | INFO     | client | Order response: {'orderId': 13050671045, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'WlWN19aIb5y3OrCmEFV6Os', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615512692}
+2026-04-19 21:48:33 | INFO     | twap |   [OK] OrderID: 13050671045 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:48:33 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:48:43 | INFO     | twap | TWAP [3/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:48:43 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:44 | INFO     | client | Order response: {'orderId': 13050671419, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'voU1WJCpdswToeQc7m8UCB', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615523763}
+2026-04-19 21:48:44 | INFO     | twap |   [OK] OrderID: 13050671419 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:48:44 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:48:54 | INFO     | twap | TWAP [4/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:48:54 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:48:55 | INFO     | client | Order response: {'orderId': 13050671800, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '5ANy37u10UHNU3fqEdVl2X', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615534894}
+2026-04-19 21:48:55 | INFO     | twap |   [OK] OrderID: 13050671800 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:48:55 | DEBUG    | twap |   Waiting 10s before next interval...
+2026-04-19 21:49:05 | INFO     | twap | TWAP [5/5] | MARKET BUY 0.01 BTCUSDT
+2026-04-19 21:49:05 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 21:49:06 | INFO     | client | Order response: {'orderId': 13050672252, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'QMHbcH0lzPIPxx4J27K2ub', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776615546032}
+2026-04-19 21:49:06 | INFO     | twap |   [OK] OrderID: 13050672252 | Filled: 0.0 | AvgPrice: 0.0 | CumulativeQty: 0.00000000
+2026-04-19 21:49:06 | INFO     | twap | TWAP complete | ExecutedQty: 0.0 | AvgFill: 0.0 | Failed: 0
+2026-04-19 22:35:20 | INFO     | grid_strategy | FILLED | BUY @ 75200.0 | OrderID: 13050662437
+2026-04-19 22:35:20 | INFO     | grid_strategy | FILLED | BUY @ 75200.0 | OrderID: 13050670839
+2026-04-19 22:35:24 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 22:35:24 | INFO     | client | Connecting to Binance Futures DEMO.
+2026-04-19 22:35:25 | INFO     | client | Order response: {'orderId': 13050813301, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'xQoD7FmQU8vI92Y0TLilhS', 'price': '76400.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776618324713}
+2026-04-19 22:35:25 | INFO     | grid_strategy | Grid order | SELL @ 76400.0 | Level: 2 | OrderID: 13050813301
+2026-04-19 22:35:25 | INFO     | grid_strategy | Counter SELL placed | Total profit: $1.2000
+2026-04-19 22:35:25 | INFO     | client | Order response: {'orderId': 13050813327, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'YvJ3si0LAMdcr9FO52KRF4', 'price': '76400.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776618324815}
+2026-04-19 22:35:25 | INFO     | grid_strategy | Grid order | SELL @ 76400.0 | Level: 2 | OrderID: 13050813327
+2026-04-19 22:35:25 | INFO     | grid_strategy | Counter SELL placed | Total profit: $1.2000
+2026-04-21 13:13:24 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:13:24 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:13:24 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:13:24 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:13:24 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:13:24 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-21 13:13:24 | CRITICAL | bot | Fatal error: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-21 13:13:56 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:13:56 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:13:56 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:13:56 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:13:56 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:13:56 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-21 13:13:56 | CRITICAL | bot | Fatal error: Missing BINANCE_API_KEY or BINANCE_API_SECRET.
+2026-04-21 13:16:10 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:16:10 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:16:10 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:16:10 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:16:10 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:16:10 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:16:11 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:16:11 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:18:08 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:18:08 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:18:08 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:18:08 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:18:08 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:18:08 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:18:10 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:18:10 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:22:24 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:22:24 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:22:24 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:22:24 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:22:24 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:22:24 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:22:27 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:22:27 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:33:49 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:33:50 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:33:50 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:33:50 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:33:50 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:33:50 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:33:52 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:33:52 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:33:54 | INFO     | bot | Bot command: limit | Args: {'command': 'limit', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01, 'price': 75000.0, 'tif': 'GTC'}
+2026-04-21 13:33:54 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:33:54 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:33:54 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:33:54 | DEBUG    | validator | Limit price validated: 75000.0
+2026-04-21 13:33:54 | INFO     | limit_orders | Placing LIMIT BUY | Symbol: BTCUSDT | Qty: 0.01 | Price: 75000.0 | TIF: GTC
+2026-04-21 13:33:54 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:33:56 | ERROR    | limit_orders | Limit order FAILED | BTCUSDT BUY @ 75000.0 | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:33:56 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:36:15 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:36:15 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:36:15 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:36:15 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:36:15 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:36:17 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:36:22 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:36:22 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:36:22 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:36:22 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:36:22 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:36:25 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:37:17 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:37:18 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:37:18 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:37:18 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:37:18 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:37:18 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:37:20 | ERROR    | market_orders | Market order FAILED | BTCUSDT BUY | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:37:20 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:37:22 | INFO     | bot | Bot command: limit | Args: {'command': 'limit', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01, 'price': 75000.0, 'tif': 'GTC'}
+2026-04-21 13:37:22 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:37:22 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:37:22 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:37:22 | DEBUG    | validator | Limit price validated: 75000.0
+2026-04-21 13:37:22 | INFO     | limit_orders | Placing LIMIT BUY | Symbol: BTCUSDT | Qty: 0.01 | Price: 75000.0 | TIF: GTC
+2026-04-21 13:37:22 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:37:25 | ERROR    | limit_orders | Limit order FAILED | BTCUSDT BUY @ 75000.0 | Error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:37:25 | CRITICAL | bot | Fatal error: (401, -2015, 'Invalid API-key, IP, or permissions for action')
+2026-04-21 13:38:40 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:38:41 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:38:41 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:38:41 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:38:41 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:38:41 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:38:43 | INFO     | client | Order response: {'orderId': 13056934507, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '1qvSMcxM6ZJcprBc8jNFMW', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776758923734}
+2026-04-21 13:38:43 | INFO     | market_orders | Market order filled | OrderID: 13056934507 | Status: NEW | AvgPrice: 0.00 | FilledQty: 0.0000
+2026-04-21 13:38:48 | INFO     | bot | Bot command: limit | Args: {'command': 'limit', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01, 'price': 75000.0, 'tif': 'GTC'}
+2026-04-21 13:38:48 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:38:48 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:38:48 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:38:48 | DEBUG    | validator | Limit price validated: 75000.0
+2026-04-21 13:38:48 | INFO     | limit_orders | Placing LIMIT BUY | Symbol: BTCUSDT | Qty: 0.01 | Price: 75000.0 | TIF: GTC
+2026-04-21 13:38:48 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:38:51 | INFO     | client | Order response: {'orderId': 13056934735, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'FfSXVnxQi7dGjBmSj7Hp92', 'price': '75000.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776758931324}
+2026-04-21 13:38:51 | INFO     | limit_orders | Limit order placed | OrderID: 13056934735 | Status: NEW | Price: 75000.00
+2026-04-21 13:41:43 | INFO     | bot | Bot command: market | Args: {'command': 'market', 'symbol': 'BTCUSDT', 'side': 'BUY', 'quantity': 0.01}
+2026-04-21 13:41:44 | DEBUG    | validator | Symbol validated: BTCUSDT
+2026-04-21 13:41:44 | DEBUG    | validator | Side validated: BUY
+2026-04-21 13:41:44 | DEBUG    | validator | Quantity validated: 0.01
+2026-04-21 13:41:44 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
+2026-04-21 13:41:44 | INFO     | client | Connecting to Binance Futures TESTNET.
+2026-04-21 13:41:46 | INFO     | client | Order response: {'orderId': 13056941379, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'yuGo78MsSnimTRyVhrE348', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0100', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776759106310}
+2026-04-21 13:41:46 | INFO     | market_orders | Market order filled | OrderID: 13056941379 | Status: NEW | AvgPrice: 0.00 | FilledQty: 0.0000

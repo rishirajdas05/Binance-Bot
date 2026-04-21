@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Bot — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span>&#9651; BINANCE BOT</span>
+            <small>USDT-M Futures Demo</small>
+        </div>
+        <a href="/" class="nav-item active">
+            <span class="icon">&#9635;</span> Dashboard
+        </a>
+        <a href="/orders" class="nav-item">
+            <span class="icon">&#8645;</span> Orders
+        </a>
+        <a href="/strategies" class="nav-item">
+            <span class="icon">&#9881;</span> Strategies
+        </a>
+        <a href="/logs" class="nav-item">
+            <span class="icon">&#9776;</span> Logs
+        </a>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+        <h2 style="margin-bottom:24px;">Dashboard</h2>
+
+        <!-- Ticker -->
+        <div class="ticker">
+            <div>
+                <div class="ticker-label">Symbol</div>
+                <div class="ticker-symbol">BTCUSDT</div>
+            </div>
+            <div>
+                <div class="ticker-label">Mark Price</div>
+                <div class="ticker-price" id="live-price" data-prev="0">Loading...</div>
+            </div>
+            <div>
+                <div class="ticker-label">Network</div>
+                <div class="ticker-value text-yellow">Demo Trading</div>
+            </div>
+        </div>
+
+        <!-- Account stats -->
+        <div class="grid-4" style="margin-bottom:20px;">
+            <div class="stat-box">
+                <div class="stat-label">Wallet Balance</div>
+                <div class="stat-value yellow" id="wallet-balance">—</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Available Balance</div>
+                <div class="stat-value" id="avail-balance">—</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Unrealized PnL</div>
+                <div class="stat-value" id="unrealized-pnl">—</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Connection</div>
+                <div class="stat-value green" id="conn-status">Live</div>
+            </div>
+        </div>
+
+        <!-- Price chart -->
+        <div class="card">
+            <div class="card-title">BTC/USDT — Mark Price (Live)</div>
+            <div style="height: 300px;">
+                <canvas id="price-chart"></canvas>
+            </div>
+        </div>
+
+        <!-- API Key setup -->
+        <div class="card">
+            <div class="card-title">API Credentials</div>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>API Key</label>
+                    <input type="password" id="api-key-input" placeholder="Your Binance Demo API Key">
+                </div>
+                <div class="form-group">
+                    <label>API Secret</label>
+                    <input type="password" id="api-secret-input" placeholder="Your Binance Demo API Secret">
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="saveAndLoad()" style="width:auto;padding:10px 24px;">
+                Save & Connect
+            </button>
+        </div>
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/static/js/api.js"></script>
+<script src="/static/js/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Load saved credentials
+        const keyInput    = document.getElementById("api-key-input");
+        const secretInput = document.getElementById("api-secret-input");
+        keyInput.value    = localStorage.getItem("api_key")    || "";
+        secretInput.value = localStorage.getItem("api_secret") || "";
+
+        keyInput.addEventListener("input",    () => saveCreds(keyInput.value, secretInput.value));
+        secretInput.addEventListener("input", () => saveCreds(keyInput.value, secretInput.value));
+
+        initChart("BTCUSDT");
+        connectPriceSocket("BTCUSDT");
+        loadAccount();
+    });
+
+    async function saveAndLoad() {
+        const key    = document.getElementById("api-key-input").value;
+        const secret = document.getElementById("api-secret-input").value;
+        saveCreds(key, secret);
+        await loadAccount();
+        showToast("Credentials saved!", "success");
+    }
+
+    async function loadAccount() {
+        try {
+            const data = await API.account();
+            if (data.success) {
+                document.getElementById("wallet-balance").textContent =
+                    "$" + fmt(data.totalWalletBalance);
+                document.getElementById("avail-balance").textContent =
+                    "$" + fmt(data.availableBalance);
+                const pnl = parseFloat(data.totalUnrealizedProfit);
+                const pnlEl = document.getElementById("unrealized-pnl");
+                pnlEl.textContent = (pnl >= 0 ? "+" : "") + "$" + fmt(pnl);
+                pnlEl.className   = "stat-value " + (pnl >= 0 ? "green" : "red");
+            }
+        } catch (e) {
+            console.error("Account load failed", e);
+        }
+    }
+</script>
+</body>
+</html>

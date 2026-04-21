@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Bot — Orders</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+</head>
+<body>
+<div class="wrapper">
+    <aside class="sidebar">
+        <div class="logo">
+            <span>&#9651; BINANCE BOT</span>
+            <small>USDT-M Futures Demo</small>
+        </div>
+        <a href="/"           class="nav-item"><span class="icon">&#9635;</span> Dashboard</a>
+        <a href="/orders"     class="nav-item active"><span class="icon">&#8645;</span> Orders</a>
+        <a href="/strategies" class="nav-item"><span class="icon">&#9881;</span> Strategies</a>
+        <a href="/logs"       class="nav-item"><span class="icon">&#9776;</span> Logs</a>
+    </aside>
+
+    <main class="main">
+        <h2 style="margin-bottom:24px;">Place Orders</h2>
+
+        <div class="grid-2">
+            <!-- Order form -->
+            <div class="card">
+                <div class="card-title">New Order</div>
+
+                <!-- Symbol -->
+                <div class="form-group">
+                    <label>Symbol</label>
+                    <select id="symbol">
+                        <option>BTCUSDT</option>
+                        <option>ETHUSDT</option>
+                        <option>BNBUSDT</option>
+                        <option>SOLUSDT</option>
+                        <option>XRPUSDT</option>
+                    </select>
+                </div>
+
+                <!-- Order type tabs -->
+                <div class="order-tabs">
+                    <div class="order-tab active" data-type="market">Market</div>
+                    <div class="order-tab"        data-type="limit">Limit</div>
+                    <div class="order-tab"        data-type="stop">Stop-Limit</div>
+                    <div class="order-tab"        data-type="oco">OCO</div>
+                </div>
+
+                <!-- BUY / SELL -->
+                <div class="side-selector">
+                    <div class="side-btn buy active" data-side="BUY">BUY / LONG</div>
+                    <div class="side-btn sell"       data-side="SELL">SELL / SHORT</div>
+                </div>
+
+                <!-- Market form -->
+                <div class="order-form" id="form-market">
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" id="qty-market" placeholder="0.01" step="0.001" value="0.01">
+                    </div>
+                </div>
+
+                <!-- Limit form -->
+                <div class="order-form" id="form-limit" style="display:none;">
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" id="qty-limit" placeholder="0.01" step="0.001" value="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Limit Price (USDT)</label>
+                        <input type="number" id="price-limit" placeholder="75000">
+                    </div>
+                    <div class="form-group">
+                        <label>Time In Force</label>
+                        <select id="tif-limit">
+                            <option value="GTC">GTC — Good Till Cancelled</option>
+                            <option value="IOC">IOC — Immediate Or Cancel</option>
+                            <option value="FOK">FOK — Fill Or Kill</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Stop-limit form -->
+                <div class="order-form" id="form-stop" style="display:none;">
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" id="qty-stop" placeholder="0.01" step="0.001" value="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Stop Price (Trigger)</label>
+                        <input type="number" id="stop-price" placeholder="76000">
+                    </div>
+                    <div class="form-group">
+                        <label>Limit Price (Fill)</label>
+                        <input type="number" id="limit-price-stop" placeholder="75000">
+                    </div>
+                </div>
+
+                <!-- OCO form -->
+                <div class="order-form" id="form-oco" style="display:none;">
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" id="qty-oco" placeholder="0.01" step="0.001" value="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Take Profit Price</label>
+                        <input type="number" id="tp-price" placeholder="90000">
+                    </div>
+                    <div class="form-group">
+                        <label>Stop Trigger Price</label>
+                        <input type="number" id="stop-price-oco" placeholder="74000">
+                    </div>
+                    <div class="form-group">
+                        <label>Stop Limit Price</label>
+                        <input type="number" id="sl-price" placeholder="73500">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="submit-order">Place Order</button>
+            </div>
+
+            <!-- Open orders -->
+            <div class="card">
+                <div class="card-title" style="display:flex;justify-content:space-between;">
+                    Open Orders
+                    <button class="btn btn-outline" onclick="loadOpenOrders()" style="padding:4px 12px;font-size:12px;">Refresh</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Symbol</th>
+                            <th>Side</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="open-orders-body">
+                        <tr><td colspan="6" class="text-muted" style="text-align:center;padding:20px;">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="/static/js/api.js"></script>
+<script src="/static/js/orders.js"></script>
+</body>
+</html>

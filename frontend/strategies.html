@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Bot — Strategies</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+</head>
+<body>
+<div class="wrapper">
+    <aside class="sidebar">
+        <div class="logo">
+            <span>&#9651; BINANCE BOT</span>
+            <small>USDT-M Futures Demo</small>
+        </div>
+        <a href="/"           class="nav-item"><span class="icon">&#9635;</span> Dashboard</a>
+        <a href="/orders"     class="nav-item"><span class="icon">&#8645;</span> Orders</a>
+        <a href="/strategies" class="nav-item active"><span class="icon">&#9881;</span> Strategies</a>
+        <a href="/logs"       class="nav-item"><span class="icon">&#9776;</span> Logs</a>
+    </aside>
+
+    <main class="main">
+        <h2 style="margin-bottom:24px;">Strategies</h2>
+
+        <div class="grid-2">
+
+            <!-- TWAP -->
+            <div class="card">
+                <div class="card-title" style="display:flex;justify-content:space-between;align-items:center;">
+                    TWAP Strategy
+                    <div class="status-indicator">
+                        <div class="status-dot" id="twap-dot"></div>
+                        <span id="twap-status-text">Idle</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Symbol</label>
+                    <select id="twap-symbol">
+                        <option>BTCUSDT</option>
+                        <option>ETHUSDT</option>
+                        <option>SOLUSDT</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Side</label>
+                    <select id="twap-side">
+                        <option value="BUY">BUY</option>
+                        <option value="SELL">SELL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Total Quantity</label>
+                    <input type="number" id="twap-qty" placeholder="0.05" step="0.001" value="0.05">
+                </div>
+                <div class="form-group">
+                    <label>Intervals (number of orders)</label>
+                    <input type="number" id="twap-intervals" placeholder="5" value="5">
+                </div>
+                <div class="form-group">
+                    <label>Interval Seconds</label>
+                    <input type="number" id="twap-secs" placeholder="10" value="10">
+                </div>
+
+                <div id="twap-info" class="alert info" style="display:none;"></div>
+
+                <div class="flex gap-8 mt-16">
+                    <button class="btn btn-primary" onclick="startTWAP()" style="flex:1;">Start TWAP</button>
+                    <button class="btn btn-danger"  onclick="stopTWAP()"  style="flex:1;">Stop</button>
+                </div>
+
+                <div id="twap-result" style="margin-top:16px;display:none;">
+                    <hr class="separator">
+                    <div class="card-title">Last Result</div>
+                    <table>
+                        <tr><td class="text-muted">Executed Qty</td>   <td id="twap-res-qty">—</td></tr>
+                        <tr><td class="text-muted">Avg Fill Price</td>  <td id="twap-res-price">—</td></tr>
+                        <tr><td class="text-muted">Failed Intervals</td><td id="twap-res-failed">—</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="card">
+                <div class="card-title" style="display:flex;justify-content:space-between;align-items:center;">
+                    Grid Strategy
+                    <div class="status-indicator">
+                        <div class="status-dot" id="grid-dot"></div>
+                        <span id="grid-status-text">Idle</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Symbol</label>
+                    <select id="grid-symbol">
+                        <option>BTCUSDT</option>
+                        <option>ETHUSDT</option>
+                        <option>SOLUSDT</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Lower Price (USDT)</label>
+                    <input type="number" id="grid-lower" placeholder="74000" value="74000">
+                </div>
+                <div class="form-group">
+                    <label>Upper Price (USDT)</label>
+                    <input type="number" id="grid-upper" placeholder="80000" value="80000">
+                </div>
+                <div class="form-group">
+                    <label>Number of Grids</label>
+                    <input type="number" id="grid-count" placeholder="5" value="5">
+                </div>
+                <div class="form-group">
+                    <label>Quantity Per Grid</label>
+                    <input type="number" id="grid-qty" placeholder="0.001" step="0.001" value="0.001">
+                </div>
+
+                <div id="grid-info" class="alert info" style="display:none;"></div>
+
+                <div class="flex gap-8 mt-16">
+                    <button class="btn btn-primary" onclick="startGrid()" style="flex:1;">Start Grid</button>
+                    <button class="btn btn-danger"  onclick="stopGrid()"  style="flex:1;">Stop & Cancel</button>
+                </div>
+
+                <div id="grid-result" style="margin-top:16px;display:none;">
+                    <hr class="separator">
+                    <div class="card-title">Session Summary</div>
+                    <table>
+                        <tr><td class="text-muted">Round Trips</td>       <td id="grid-res-trips">—</td></tr>
+                        <tr><td class="text-muted">Estimated Profit</td>   <td id="grid-res-profit" class="text-green">—</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="/static/js/api.js"></script>
+<script>
+    async function startTWAP() {
+        const symbol    = document.getElementById("twap-symbol").value;
+        const side      = document.getElementById("twap-side").value;
+        const qty       = parseFloat(document.getElementById("twap-qty").value);
+        const intervals = parseInt(document.getElementById("twap-intervals").value);
+        const secs      = parseInt(document.getElementById("twap-secs").value);
+
+        const info = document.getElementById("twap-info");
+        info.className   = "alert info show";
+        info.textContent = `Starting TWAP: ${intervals} x ${qty/intervals} ${symbol} every ${secs}s...`;
+
+        const result = await API.startTWAP(symbol, side, qty, intervals, secs);
+        if (result.success) {
+            document.getElementById("twap-dot").className       = "status-dot running";
+            document.getElementById("twap-status-text").textContent = "Running";
+            info.textContent = result.message;
+            showToast("TWAP started!", "success");
+            setTimeout(checkTWAPResult, (intervals * secs + 5) * 1000);
+        } else {
+            info.className   = "alert error show";
+            info.textContent = result.detail;
+        }
+    }
+
+    async function stopTWAP() {
+        const result = await API.stopTWAP();
+        document.getElementById("twap-dot").className        = "status-dot stopped";
+        document.getElementById("twap-status-text").textContent = "Stopped";
+        showToast(result.message, result.success ? "success" : "error");
+    }
+
+    async function checkTWAPResult() {
+        const result = await API.twapResult();
+        if (result.success) {
+            document.getElementById("twap-dot").className        = "status-dot stopped";
+            document.getElementById("twap-status-text").textContent = "Complete";
+            document.getElementById("twap-result").style.display = "block";
+            document.getElementById("twap-res-qty").textContent    = result.result.executed_qty;
+            document.getElementById("twap-res-price").textContent  = "$" + fmt(result.result.average_fill_price);
+            document.getElementById("twap-res-failed").textContent = result.result.failed_intervals;
+        }
+    }
+
+    async function startGrid() {
+        const symbol = document.getElementById("grid-symbol").value;
+        const lower  = parseFloat(document.getElementById("grid-lower").value);
+        const upper  = parseFloat(document.getElementById("grid-upper").value);
+        const grids  = parseInt(document.getElementById("grid-count").value);
+        const qty    = parseFloat(document.getElementById("grid-qty").value);
+
+        const info = document.getElementById("grid-info");
+        info.className   = "alert info show";
+        info.textContent = `Starting Grid: ${grids} levels between $${lower}–$${upper}...`;
+
+        const result = await API.startGrid(symbol, lower, upper, grids, qty);
+        if (result.success) {
+            document.getElementById("grid-dot").className        = "status-dot running";
+            document.getElementById("grid-status-text").textContent = "Running";
+            info.textContent = result.message;
+            showToast("Grid started!", "success");
+        } else {
+            info.className   = "alert error show";
+            info.textContent = result.detail;
+        }
+    }
+
+    async function stopGrid() {
+        const result = await API.stopGrid();
+        document.getElementById("grid-dot").className        = "status-dot stopped";
+        document.getElementById("grid-status-text").textContent = "Stopped";
+        showToast(result.message, result.success ? "success" : "error");
+
+        const res = await API.gridResult();
+        if (res.success) {
+            document.getElementById("grid-result").style.display  = "block";
+            document.getElementById("grid-res-trips").textContent  = res.result.round_trips;
+            document.getElementById("grid-res-profit").textContent = "$" + fmt(res.result.estimated_profit_usdt);
+        }
+    }
+</script>
+</body>
+</html>

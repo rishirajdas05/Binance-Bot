@@ -1,0 +1,121 @@
+/* ── Side selector (BUY/SELL toggle) ─────────────────────────── */
+.side-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.side-btn {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface2);
+    color: var(--muted);
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+}
+
+.side-btn.buy.active  { background: var(--green); color: #000; border-color: var(--green); }
+.side-btn.sell.active { background: var(--red);   color: #fff; border-color: var(--red); }
+.side-btn:hover { border-color: var(--yellow); }
+
+/* ── Order type tabs ──────────────────────────────────────────── */
+.order-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.order-tab {
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface2);
+    color: var(--muted);
+    font-family: var(--font);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.order-tab.active, .order-tab:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
+}
+
+/* ── Strategy status badge ────────────────────────────────────── */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--muted);
+}
+
+.status-dot.running  { background: var(--green); animation: pulse 1.5s infinite; }
+.status-dot.stopped  { background: var(--red); }
+.status-dot.waiting  { background: var(--yellow); }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+}
+
+/* ── Price ticker ─────────────────────────────────────────────── */
+.ticker {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+}
+
+.ticker-symbol { font-size: 16px; font-weight: 700; color: var(--yellow); }
+.ticker-price  { font-size: 28px; font-weight: 700; }
+.ticker-label  { font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+.ticker-value  { font-size: 13px; }
+
+/* ── Progress bar ─────────────────────────────────────────────── */
+.progress-bar {
+    height: 6px;
+    background: var(--surface2);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--yellow);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* ── Alert box ────────────────────────────────────────────────── */
+.alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    display: none;
+}
+
+.alert.show    { display: block; }
+.alert.success { background: rgba(14,203,129,0.1); border: 1px solid var(--green); color: var(--green); }
+.alert.error   { background: rgba(246,70,93,0.1);  border: 1px solid var(--red);   color: var(--red); }
+.alert.info    { background: rgba(240,185,11,0.1); border: 1px solid var(--yellow);color: var(--yellow); }

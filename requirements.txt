@@ -1,0 +1,3 @@
+binance-futures-connector>=3.3.0
+colorlog>=6.8.0
+requests>=2.31.0
