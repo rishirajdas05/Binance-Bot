@@ -1,0 +1,27 @@
+# Environment variables - NEVER commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Logs (optional - comment out if you want to include bot.log)
+# bot.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

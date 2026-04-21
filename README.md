@@ -1,331 +1,202 @@
-# Binance Futures Order Bot
+# Binance Futures Trading Bot
 
-A fully-featured CLI trading bot for **Binance USDT-M Futures** supporting
-market orders, limit orders, and four advanced strategies: **Stop-Limit**,
-**OCO**, **TWAP**, and **Grid Trading**.
+A CLI-based algorithmic trading bot for Binance USDT-M Futures Demo
+with Market, Limit, Stop-Limit, OCO, TWAP, and Grid order support.
+Includes structured logging, input validation, and a full web UI.
 
 ---
 
 ## Project Structure
 
-```
-binance_bot/
-│
-├── bot.py                        # Unified CLI entry-point (all order types)
+binance-bot/
+├── bot.py
 ├── requirements.txt
-├── bot.log                       # Auto-generated structured log file
+├── .env.example
+├── bot.log
 ├── README.md
-│
-└── src/
-    ├── __init__.py
-    ├── client.py                 # API client factory (testnet/live)
-    ├── logger.py                 # Centralized colored + file logging
-    ├── validator.py              # All input validation logic
-    ├── market_orders.py          # Market order execution
-    ├── limit_orders.py           # Limit order execution + cancel/query
-    │
-    └── advanced/
-        ├── __init__.py
-        ├── stop_limit.py         # Stop-Limit orders
-        ├── oco.py                # OCO (One-Cancels-the-Other)
-        ├── twap.py               # TWAP strategy
-        └── grid_strategy.py      # Grid trading strategy
-```
+├── src/
+│   ├── client.py
+│   ├── logger.py
+│   ├── validator.py
+│   ├── market_orders.py
+│   ├── limit_orders.py
+│   └── advanced/
+│       ├── stop_limit.py
+│       ├── oco.py
+│       ├── twap.py
+│       └── grid_strategy.py
+├── backend/
+│   ├── main.py
+│   └── routes/
+│       ├── orders.py
+│       ├── strategies.py
+│       └── websocket.py
+└── frontend/
+    ├── index.html
+    ├── orders.html
+    ├── strategies.html
+    ├── logs.html
+    ├── css/
+    │   ├── main.css
+    │   └── components.css
+    └── js/
+        ├── api.js
+        ├── chart.js
+        ├── logs.js
+        └── orders.js
 
 ---
 
 ## Setup
 
-### 1. Clone / Download
+1. Clone the repository
 
-```bash
-git clone https://github.com/your_name/your_name-binance-bot.git
-cd your_name-binance-bot
-```
+git clone https://github.com/rishirajdas05/binance-bot.git
+cd binance-bot
 
-### 2. Install Dependencies
+2. Create virtual environment
 
-```bash
+python -m venv .venv
+.venv\Scripts\activate        # Windows
+source .venv/bin/activate     # Mac/Linux
+
+3. Install dependencies
+
 pip install -r requirements.txt
-```
 
-### 3. Get Binance Testnet API Keys
+4. Get API Keys
 
-1. Go to [Binance Futures Testnet](https://testnet.binancefuture.com/)
-2. Log in and navigate to **API Management**
-3. Generate a new API Key + Secret
-4. Keep these safe — you'll need them in the next step
+- Go to demo.binance.com
+- Login → Account → API Management
+- Create API → Enable Futures
+- Copy API Key and Secret Key
 
-### 4. Set Environment Variables
+5. Create .env file
 
-**Linux / macOS:**
-```bash
-export BINANCE_API_KEY="your_api_key_here"
-export BINANCE_API_SECRET="your_api_secret_here"
-export BINANCE_TESTNET="true"      # Set to "false" for live trading
-```
-
-**Windows (PowerShell):**
-```powershell
-$env:BINANCE_API_KEY    = "your_api_key_here"
-$env:BINANCE_API_SECRET = "your_api_secret_here"
-$env:BINANCE_TESTNET    = "true"
-```
-
-> ⚠️ **Never hardcode API keys in source code. Always use environment variables.**
+BINANCE_API_KEY=your_api_key_here
+BINANCE_API_SECRET=your_api_secret_here
 
 ---
 
-## Usage
+## How to Run (CLI)
 
-All orders can be run via the unified `bot.py` entry-point **or** by calling
-individual modules directly.
+Market Order:
+    python bot.py market BTCUSDT BUY 0.01
+    python bot.py market ETHUSDT SELL 0.5
 
----
+Limit Order:
+    python bot.py limit BTCUSDT BUY 0.01 75000
+    python bot.py limit BTCUSDT SELL 0.01 90000 GTC
 
-### Market Order
+Stop-Limit Order (Bonus):
+    python bot.py stop BTCUSDT SELL 0.01 76000 75000
+    python bot.py stop BTCUSDT BUY  0.01 77000 77500
 
-Executes immediately at the best available price.
+OCO Order (Bonus):
+    python bot.py oco BTCUSDT SELL 0.01 90000 74000 73500
 
-```bash
-# Via unified bot
-python bot.py market BTCUSDT BUY 0.01
-python bot.py market ETHUSDT SELL 0.5
+TWAP Strategy (Bonus):
+    python bot.py twap BTCUSDT BUY 0.05 5 10
 
-# Via module directly
-python src/market_orders.py BTCUSDT BUY 0.01
-```
-
-**Arguments:**
-| Argument   | Description                        | Example    |
-|------------|------------------------------------|------------|
-| `SYMBOL`   | Trading pair (uppercase)           | `BTCUSDT`  |
-| `SIDE`     | Direction                          | `BUY`/`SELL` |
-| `QUANTITY` | Amount in base asset               | `0.01`     |
+Grid Strategy (Bonus):
+    python bot.py grid BTCUSDT 74000 80000 5 0.001
 
 ---
 
-### Limit Order
+## Web UI (Bonus)
 
-Executes only at the specified price or better. Rests in the order book.
+Install additional dependencies:
+    pip install fastapi uvicorn websockets python-multipart
 
-```bash
-python bot.py limit BTCUSDT BUY  0.01 30000
-python bot.py limit ETHUSDT SELL 1.0  2000 IOC
-```
+Run the server:
+    uvicorn backend.main:app --reload --port 8000
 
-**Arguments:**
-| Argument         | Description                                | Default |
-|------------------|--------------------------------------------|---------|
-| `SYMBOL`         | Trading pair                               |         |
-| `SIDE`           | BUY or SELL                                |         |
-| `QUANTITY`       | Amount in base asset                       |         |
-| `PRICE`          | Limit price                                |         |
-| `TIME_IN_FORCE`  | `GTC` / `IOC` / `FOK` / `GTX`             | `GTC`   |
+Open browser at: http://localhost:8000
 
-**Time-In-Force Options:**
-- **GTC** — Good Till Cancelled (stays until filled or cancelled)
-- **IOC** — Immediate Or Cancel (fill what you can, cancel the rest)
-- **FOK** — Fill Or Kill (fill everything or cancel entirely)
-- **GTX** — Good Till Crossing / Post-Only (only maker order)
+UI Features:
+- Live BTC price chart via WebSocket (updates every second)
+- Place all order types via forms (Market, Limit, Stop-Limit, OCO)
+- View all open orders in real time
+- Run and stop TWAP and Grid strategies
+- Live log viewer with level filtering (INFO/WARNING/ERROR/CRITICAL)
+- Account balance and unrealized PnL display
 
 ---
 
-### Stop-Limit Order *(Advanced)*
+## CLI Output Example
 
-Places a limit order only when the market price reaches the stop trigger.
+Market Order:
+    2026-04-21 13:38:41 [INFO] market_orders: Placing MARKET BUY | Symbol: BTCUSDT | Qty: 0.01
+    2026-04-21 13:38:43 [INFO] market_orders: Market order filled | OrderID: 13056934507 | Status: NEW
 
-```bash
-# Stop-loss: Sell if BTC drops to $29,000, fill at $28,800 or better
-python bot.py stop BTCUSDT SELL 0.01 29000 28800
-
-# Breakout entry: Buy if BTC rises to $32,000, fill at $32,200 or better
-python bot.py stop BTCUSDT BUY 0.01 32000 32200
-```
-
-**Arguments:**
-| Argument      | Description                            |
-|---------------|----------------------------------------|
-| `SYMBOL`      | Trading pair                           |
-| `SIDE`        | BUY or SELL                            |
-| `QUANTITY`    | Amount in base asset                   |
-| `STOP_PRICE`  | Price that activates the limit order   |
-| `LIMIT_PRICE` | Price at which the limit order executes|
-
-**Price Logic:**
-- **SELL**: `stop_price > limit_price` (stop triggers, then fills at limit or above)
-- **BUY**: `stop_price < limit_price` (stop triggers, then fills at limit or below)
-
----
-
-### OCO Order *(Advanced)*
-
-Places a take-profit and stop-loss simultaneously.
-When one fills, the other is cancelled.
-
-```bash
-# Hold a BTC long: TP at $33,000, stop-loss triggers at $28,000
-python bot.py oco BTCUSDT SELL 0.01 33000 28000 27800
-```
-
-**Arguments:**
-| Argument           | Description                          |
-|--------------------|--------------------------------------|
-| `SYMBOL`           | Trading pair                         |
-| `SIDE`             | SELL (to exit a long) / BUY (short)  |
-| `QUANTITY`         | Quantity per leg                     |
-| `TAKE_PROFIT`      | Take-profit limit price              |
-| `STOP_PRICE`       | Stop trigger price                   |
-| `STOP_LIMIT_PRICE` | Limit price on the stop leg          |
-
-**How It Works (SELL OCO):**
-```
-TP Limit (SELL) @ $33,000 ──┐
-                             ├─ One fills → other cancels
-SL Stop-Limit (SELL) @ $28,000/$27,800 ─┘
-```
-
-> 📝 **Note:** Binance Futures doesn't natively support OCO. This bot implements
-> it by placing both orders independently and running a background monitor thread
-> that cancels the surviving order when one fills.
-
----
-
-### TWAP Strategy *(Advanced)*
-
-Splits a large order into equal child orders over time to minimize price impact.
-
-```bash
-# Buy 1.0 BTC total: 10 child orders of 0.1 BTC each, every 60 seconds
-python bot.py twap BTCUSDT BUY 1.0 10 60
-
-# Sell 5 ETH total: 5 child orders of 1 ETH each, every 30 seconds
-python bot.py twap ETHUSDT SELL 5.0 5 30
-```
-
-**Arguments:**
-| Argument          | Description                            |
-|-------------------|----------------------------------------|
-| `SYMBOL`          | Trading pair                           |
-| `SIDE`            | BUY or SELL                            |
-| `TOTAL_QUANTITY`  | Total amount to execute                |
-| `INTERVALS`       | Number of child orders (minimum 2)     |
-| `INTERVAL_SECS`   | Seconds between each child order       |
-
-**Output Summary:**
-```json
-{
-  "symbol": "BTCUSDT",
-  "side": "BUY",
-  "total_quantity": 1.0,
-  "intervals": 10,
-  "executed_qty": 1.0,
-  "average_fill_price": 30124.55,
-  "failed_intervals": 0,
-  "fill_prices": [30100, 30110, ..., 30150]
-}
-```
-
----
-
-### Grid Trading Strategy *(Advanced)*
-
-Automates buy-low/sell-high within a price range using a grid of limit orders.
-
-```bash
-# BTC grid: range $28,000–$32,000, 5 grids, 0.001 BTC per level
-python bot.py grid BTCUSDT 28000 32000 5 0.001
-```
-
-**Arguments:**
-| Argument          | Description                            |
-|-------------------|----------------------------------------|
-| `SYMBOL`          | Trading pair                           |
-| `LOWER_PRICE`     | Bottom of the grid range               |
-| `UPPER_PRICE`     | Top of the grid range                  |
-| `GRIDS`           | Number of grid intervals (minimum 2)   |
-| `QTY_PER_GRID`    | Quantity per individual grid order     |
-
-**How It Works:**
-```
-Price = $30,000  (current)
-
-Grid levels: $28,000 / $28,800 / $29,600 / $30,400 / $31,200 / $32,000
-                                                  ↑ current price
-BUY orders:  $28,000  $28,800  $29,600  $30,400
-SELL orders:                             $30,400  $31,200  $32,000
-
-→ BUY fills at $29,600 → SELL placed at $30,400
-→ SELL fills at $30,400 → BUY placed at $29,600
-→ Repeat. Profit per cycle: $800 × 0.001 = $0.80 USDT
-```
-
-Press **Ctrl+C** to stop the grid. All open orders will be cancelled.
-
----
-
-## Logging
-
-All actions are logged to **`bot.log`** in the project root.
-
-**Log format:**
-```
-2024-05-01 14:32:01 | INFO     | market_orders | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.01
-2024-05-01 14:32:01 | INFO     | client        | Connecting to Binance Futures TESTNET.
-2024-05-01 14:32:02 | INFO     | market_orders | Market order placed successfully | OrderID: 123456789 | Status: FILLED | AvgPrice: 29850.0 | FilledQty: 0.01
-```
-
-**Severity levels used:**
-| Level    | When used                                              |
-|----------|--------------------------------------------------------|
-| DEBUG    | Internal state, price checks, poll intervals           |
-| INFO     | Successful placements, fills, status updates           |
-| WARNING  | Partial fills, graceful stops, rollback notices        |
-| ERROR    | Failed API calls, validation failures                  |
-| CRITICAL | Unhandled exceptions, rollback failures                |
+Limit Order:
+    2026-04-21 13:38:48 [INFO] limit_orders: Placing LIMIT BUY | Symbol: BTCUSDT | Price: 75000.0
+    2026-04-21 13:38:51 [INFO] limit_orders: Limit order placed | OrderID: 13056934735 | Status: NEW
 
 ---
 
 ## Validation Rules
 
-| Field            | Rule                                              |
-|------------------|---------------------------------------------------|
-| Symbol           | Non-empty, alphabetic characters only             |
-| Side             | Must be exactly `BUY` or `SELL`                   |
-| Quantity         | Must be > 0                                       |
-| Price            | Must be > 0                                       |
-| Stop-Limit SELL  | `stop_price > limit_price`                        |
-| Stop-Limit BUY   | `stop_price < limit_price`                        |
-| OCO SELL         | `take_profit > stop_price > stop_limit_price`     |
-| Grid             | `lower < upper`, grids ≥ 2, qty > 0               |
-| TWAP             | qty > 0, intervals ≥ 2, interval_seconds ≥ 1      |
+Symbol          : Non-empty, letters only (e.g. BTCUSDT)
+Side            : Must be BUY or SELL
+Quantity        : Must be > 0
+Price           : Must be > 0 (required for LIMIT)
+Stop-Limit SELL : stop_price > limit_price
+Stop-Limit BUY  : stop_price < limit_price
+OCO SELL        : take_profit > stop_price > stop_limit_price
+Grid            : lower_price < upper_price, grids >= 2
+TWAP            : intervals >= 2, interval_seconds >= 1
 
 ---
 
-## Environment Variables Reference
+## Logging
 
-| Variable             | Description                         | Default  |
-|----------------------|-------------------------------------|----------|
-| `BINANCE_API_KEY`    | Your Binance API key                | (required)|
-| `BINANCE_API_SECRET` | Your Binance API secret             | (required)|
-| `BINANCE_TESTNET`    | `"true"` for testnet, `"false"` live| `"true"` |
+All actions logged to bot.log:
 
----
+    2026-04-21 13:38:41 | INFO     | market_orders | Placing MARKET BUY order
+    2026-04-21 13:38:43 | INFO     | client        | Order response: {orderId: 13056934507}
+    2026-04-21 13:38:43 | ERROR    | market_orders | Order FAILED | Error: ...
 
-## Safety Notes
-
-1. **Always test on the testnet first** (`BINANCE_TESTNET=true`).
-2. Grid and OCO strategies place **multiple orders simultaneously** — verify
-   your account has sufficient margin.
-3. TWAP runs for `intervals × interval_seconds` seconds total. Use Ctrl+C
-   to abort early; already-placed child orders will remain open.
-4. OCO requires the monitor thread to be running to cancel the surviving leg.
-   If your process exits, cancel orders manually on Binance.
+Log levels:
+    DEBUG    - Input validation, price polling
+    INFO     - Successful orders, fills, status updates
+    WARNING  - Partial fills, graceful stops
+    ERROR    - Failed API calls, validation errors
+    CRITICAL - Fatal errors, unhandled exceptions
 
 ---
 
-## Resources
+## Requirements
 
-- [Binance Futures API Docs](https://binance-docs.github.io/apidocs/futures/en/)
-- [Binance Futures Testnet](https://testnet.binancefuture.com/)
-- [python-binance-futures-connector](https://github.com/binance/binance-futures-connector-python)
+- Python 3.10+
+- Binance Demo account
+- Internet connection
+
+---
+
+## Assumptions
+
+- All orders placed on Binance USDT-M Futures Demo environment
+- Stop-Limit and OCO stop legs simulated via price polling
+  (Demo environment does not support native STOP order type)
+- Quantities must meet Binance minimum notional requirements
+- Demo and Testnet use separate API keys and URLs
+
+---
+
+## Dependencies
+
+requests>=2.31.0
+colorlog>=6.8.0
+python-dotenv>=1.0.0
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+websockets>=12.0
+python-multipart>=0.0.9
+
+---
+
+## Author
+
+Rishi Raj Das
+GitHub: https://github.com/rishirajdas05
