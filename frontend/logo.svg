@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40">
+  <!-- Background -->
+  <rect width="200" height="40" rx="6" fill="transparent"/>
+
+  <!-- Triangle icon -->
+  <polygon points="12,32 24,12 36,32" fill="none" stroke="#f0b90b" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="24" cy="26" r="2.5" fill="#f0b90b"/>
+
+  <!-- Text -->
+  <text x="44" y="22" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700" fill="#f0b90b">BINANCE BOT</text>
+  <text x="44" y="34" font-family="IBM Plex Mono, monospace" font-size="9" fill="#848e9c">USDT-M Futures Demo</text>
+</svg>

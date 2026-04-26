@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binance Bot — Strategies</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/components.css">
@@ -12,8 +13,7 @@
 <div class="wrapper">
     <aside class="sidebar">
         <div class="logo">
-            <span>&#9651; BINANCE BOT</span>
-            <small>USDT-M Futures Demo</small>
+            <img src="/static/logo.svg" alt="Binance Bot" style="width:160px;margin-bottom:4px;">
         </div>
         <a href="/"           class="nav-item"><span class="icon">&#9635;</span> Dashboard</a>
         <a href="/orders"     class="nav-item"><span class="icon">&#8645;</span> Orders</a>
@@ -75,9 +75,9 @@
                     <hr class="separator">
                     <div class="card-title">Last Result</div>
                     <table>
-                        <tr><td class="text-muted">Executed Qty</td>   <td id="twap-res-qty">—</td></tr>
-                        <tr><td class="text-muted">Avg Fill Price</td>  <td id="twap-res-price">—</td></tr>
-                        <tr><td class="text-muted">Failed Intervals</td><td id="twap-res-failed">—</td></tr>
+                        <tr><td class="text-muted">Executed Qty</td>    <td id="twap-res-qty">—</td></tr>
+                        <tr><td class="text-muted">Avg Fill Price</td>   <td id="twap-res-price">—</td></tr>
+                        <tr><td class="text-muted">Failed Intervals</td> <td id="twap-res-failed">—</td></tr>
                     </table>
                 </div>
             </div>
@@ -128,8 +128,8 @@
                     <hr class="separator">
                     <div class="card-title">Session Summary</div>
                     <table>
-                        <tr><td class="text-muted">Round Trips</td>       <td id="grid-res-trips">—</td></tr>
-                        <tr><td class="text-muted">Estimated Profit</td>   <td id="grid-res-profit" class="text-green">—</td></tr>
+                        <tr><td class="text-muted">Round Trips</td>      <td id="grid-res-trips">—</td></tr>
+                        <tr><td class="text-muted">Estimated Profit</td>  <td id="grid-res-profit" class="text-green">—</td></tr>
                     </table>
                 </div>
             </div>
@@ -153,7 +153,7 @@
 
         const result = await API.startTWAP(symbol, side, qty, intervals, secs);
         if (result.success) {
-            document.getElementById("twap-dot").className       = "status-dot running";
+            document.getElementById("twap-dot").className        = "status-dot running";
             document.getElementById("twap-status-text").textContent = "Running";
             info.textContent = result.message;
             showToast("TWAP started!", "success");
@@ -192,7 +192,7 @@
 
         const info = document.getElementById("grid-info");
         info.className   = "alert info show";
-        info.textContent = `Starting Grid: ${grids} levels between $${lower}–$${upper}...`;
+        info.textContent = `Starting Grid: ${grids} levels between $${lower}-$${upper}...`;
 
         const result = await API.startGrid(symbol, lower, upper, grids, qty);
         if (result.success) {
