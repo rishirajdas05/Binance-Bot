@@ -1,3 +1,7 @@
-binance-futures-connector>=3.3.0
-colorlog>=6.8.0
 requests>=2.31.0
+colorlog>=6.8.0
+python-dotenv>=1.0.0
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+websockets>=12.0
+python-multipart>=0.0.9
