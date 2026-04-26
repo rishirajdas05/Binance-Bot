@@ -1,19 +1,14 @@
-"""
-main.py — FastAPI backend server for Binance Bot UI.
-
-Run:
-    uvicorn backend.main:app --reload --port 8000
-"""
-
 import os
 import sys
+import time
+import threading
+import requests
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-# Load .env file FIRST before anything else
 load_dotenv()
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
@@ -37,6 +32,7 @@ app.include_router(ws_router)
 
 app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
+
 @app.get("/")
 def root():
     return FileResponse("frontend/index.html")
@@ -52,3 +48,23 @@ def strategies_page():
 @app.get("/logs")
 def logs_page():
     return FileResponse("frontend/logs.html")
+
+@app.get("/ping")
+def ping():
+    return {"status": "alive", "message": "Binance Bot is running"}
+
+
+def keep_alive():
+    """Ping self every 10 minutes to prevent Render sleep."""
+    time.sleep(60)
+    while True:
+        try:
+            requests.get("https://binance-bot-gwbg.onrender.com/ping", timeout=10)
+            print("Keep-alive ping sent successfully.")
+        except Exception as e:
+            print(f"Keep-alive ping failed: {e}")
+        time.sleep(600)
+
+
+# Start keep-alive background thread
+threading.Thread(target=keep_alive, daemon=True).start()
