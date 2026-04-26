@@ -20,7 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function connectLogSocket() {
-    logSocket = new WebSocket("wss://binance-bot-gwbg.onrender.com/ws/logs");
+    const wsUrl = window.location.hostname === "localhost"
+        ? "ws://localhost:8000/ws/logs"
+        : "wss://binance-bot-gwbg.onrender.com/ws/logs";
+
+    logSocket = new WebSocket(wsUrl);
 
     logSocket.onmessage = (event) => {
         appendLog(event.data);
@@ -30,14 +34,19 @@ function connectLogSocket() {
         console.warn("Log socket error — retrying in 3s");
         setTimeout(connectLogSocket, 3000);
     };
+
+    logSocket.onclose = () => {
+        console.warn("Log socket closed — retrying in 3s");
+        setTimeout(connectLogSocket, 3000);
+    };
 }
 
 function appendLog(line) {
     const box = document.getElementById("log-box");
     if (!box) return;
 
-    const div   = document.createElement("div");
-    let level   = "DEBUG";
+    const div  = document.createElement("div");
+    let level  = "DEBUG";
     if (line.includes("| INFO"))     level = "INFO";
     if (line.includes("| WARNING"))  level = "WARNING";
     if (line.includes("| ERROR"))    level = "ERROR";
@@ -49,6 +58,5 @@ function appendLog(line) {
 
     if (autoScroll) box.scrollTop = box.scrollHeight;
 
-    // Keep only last 500 lines
     while (box.children.length > 500) box.removeChild(box.firstChild);
 }

@@ -1,8 +1,10 @@
 // api.js — All fetch calls to FastAPI backend
-// API keys are stored in .env on the server — not needed in frontend
+// Auto-detects localhost vs Render deployment
 
-const API_BASE = "https://binance-bot-gwbg.onrender.com/api";
-// Generic POST
+const API_BASE = window.location.hostname === "localhost"
+    ? "http://localhost:8000/api"
+    : "https://binance-bot-gwbg.onrender.com/api";
+
 async function apiPost(endpoint, body = {}) {
     const res = await fetch(`${API_BASE}${endpoint}`, {
         method:  "POST",
@@ -12,7 +14,6 @@ async function apiPost(endpoint, body = {}) {
     return res.json();
 }
 
-// Generic GET
 async function apiGet(endpoint, params = {}) {
     const qs  = new URLSearchParams(params).toString();
     const url = qs ? `${API_BASE}${endpoint}?${qs}` : `${API_BASE}${endpoint}`;
@@ -20,7 +21,6 @@ async function apiGet(endpoint, params = {}) {
     return res.json();
 }
 
-// ── Order APIs ─────────────────────────────────────────────────
 const API = {
     marketOrder: (symbol, side, quantity) =>
         apiPost("/orders/market", { symbol, side, quantity }),
@@ -46,17 +46,16 @@ const API = {
     startTWAP: (symbol, side, total_quantity, intervals, interval_seconds) =>
         apiPost("/strategies/twap", { symbol, side, total_quantity, intervals, interval_seconds }),
 
-    stopTWAP:  () => apiPost("/strategies/twap/stop"),
-    twapResult:() => apiGet("/strategies/twap/result"),
+    stopTWAP:   () => apiPost("/strategies/twap/stop"),
+    twapResult: () => apiGet("/strategies/twap/result"),
 
     startGrid: (symbol, lower_price, upper_price, grids, quantity_per_grid) =>
         apiPost("/strategies/grid", { symbol, lower_price, upper_price, grids, quantity_per_grid }),
 
-    stopGrid:  () => apiPost("/strategies/grid/stop"),
-    gridResult:() => apiGet("/strategies/grid/result"),
+    stopGrid:   () => apiPost("/strategies/grid/stop"),
+    gridResult: () => apiGet("/strategies/grid/result"),
 };
 
-// ── Toast helper ───────────────────────────────────────────────
 function showToast(message, type = "success") {
     const t = document.getElementById("toast");
     if (!t) return;
@@ -65,10 +64,14 @@ function showToast(message, type = "success") {
     setTimeout(() => t.className = "toast", 3000);
 }
 
-// ── Format number ──────────────────────────────────────────────
 function fmt(n, decimals = 2) {
     return parseFloat(n).toLocaleString("en-US", {
         minimumFractionDigits: decimals,
         maximumFractionDigits: decimals,
     });
+}
+
+function saveCreds(key, secret) {
+    localStorage.setItem("api_key",    key);
+    localStorage.setItem("api_secret", secret);
 }

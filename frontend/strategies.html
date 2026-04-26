@@ -39,9 +39,21 @@
                 <div class="form-group">
                     <label>Symbol</label>
                     <select id="twap-symbol">
-                        <option>BTCUSDT</option>
-                        <option>ETHUSDT</option>
-                        <option>SOLUSDT</option>
+                        <option value="BTCUSDT">BTC/USDT</option>
+                        <option value="ETHUSDT">ETH/USDT</option>
+                        <option value="BNBUSDT">BNB/USDT</option>
+                        <option value="SOLUSDT">SOL/USDT</option>
+                        <option value="XRPUSDT">XRP/USDT</option>
+                        <option value="DOGEUSDT">DOGE/USDT</option>
+                        <option value="ADAUSDT">ADA/USDT</option>
+                        <option value="AVAXUSDT">AVAX/USDT</option>
+                        <option value="DOTUSDT">DOT/USDT</option>
+                        <option value="MATICUSDT">MATIC/USDT</option>
+                        <option value="LINKUSDT">LINK/USDT</option>
+                        <option value="LTCUSDT">LTC/USDT</option>
+                        <option value="UNIUSDT">UNI/USDT</option>
+                        <option value="ATOMUSDT">ATOM/USDT</option>
+                        <option value="NEARUSDT">NEAR/USDT</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -95,9 +107,21 @@
                 <div class="form-group">
                     <label>Symbol</label>
                     <select id="grid-symbol">
-                        <option>BTCUSDT</option>
-                        <option>ETHUSDT</option>
-                        <option>SOLUSDT</option>
+                        <option value="BTCUSDT">BTC/USDT</option>
+                        <option value="ETHUSDT">ETH/USDT</option>
+                        <option value="BNBUSDT">BNB/USDT</option>
+                        <option value="SOLUSDT">SOL/USDT</option>
+                        <option value="XRPUSDT">XRP/USDT</option>
+                        <option value="DOGEUSDT">DOGE/USDT</option>
+                        <option value="ADAUSDT">ADA/USDT</option>
+                        <option value="AVAXUSDT">AVAX/USDT</option>
+                        <option value="DOTUSDT">DOT/USDT</option>
+                        <option value="MATICUSDT">MATIC/USDT</option>
+                        <option value="LINKUSDT">LINK/USDT</option>
+                        <option value="LTCUSDT">LTC/USDT</option>
+                        <option value="UNIUSDT">UNI/USDT</option>
+                        <option value="ATOMUSDT">ATOM/USDT</option>
+                        <option value="NEARUSDT">NEAR/USDT</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -128,8 +152,8 @@
                     <hr class="separator">
                     <div class="card-title">Session Summary</div>
                     <table>
-                        <tr><td class="text-muted">Round Trips</td>      <td id="grid-res-trips">—</td></tr>
-                        <tr><td class="text-muted">Estimated Profit</td>  <td id="grid-res-profit" class="text-green">—</td></tr>
+                        <tr><td class="text-muted">Round Trips</td>     <td id="grid-res-trips">—</td></tr>
+                        <tr><td class="text-muted">Estimated Profit</td> <td id="grid-res-profit" class="text-green">—</td></tr>
                     </table>
                 </div>
             </div>
@@ -153,7 +177,7 @@
 
         const result = await API.startTWAP(symbol, side, qty, intervals, secs);
         if (result.success) {
-            document.getElementById("twap-dot").className        = "status-dot running";
+            document.getElementById("twap-dot").className           = "status-dot running";
             document.getElementById("twap-status-text").textContent = "Running";
             info.textContent = result.message;
             showToast("TWAP started!", "success");
@@ -166,7 +190,7 @@
 
     async function stopTWAP() {
         const result = await API.stopTWAP();
-        document.getElementById("twap-dot").className        = "status-dot stopped";
+        document.getElementById("twap-dot").className           = "status-dot stopped";
         document.getElementById("twap-status-text").textContent = "Stopped";
         showToast(result.message, result.success ? "success" : "error");
     }
@@ -174,12 +198,12 @@
     async function checkTWAPResult() {
         const result = await API.twapResult();
         if (result.success) {
-            document.getElementById("twap-dot").className        = "status-dot stopped";
+            document.getElementById("twap-dot").className           = "status-dot stopped";
             document.getElementById("twap-status-text").textContent = "Complete";
-            document.getElementById("twap-result").style.display = "block";
-            document.getElementById("twap-res-qty").textContent    = result.result.executed_qty;
-            document.getElementById("twap-res-price").textContent  = "$" + fmt(result.result.average_fill_price);
-            document.getElementById("twap-res-failed").textContent = result.result.failed_intervals;
+            document.getElementById("twap-result").style.display    = "block";
+            document.getElementById("twap-res-qty").textContent     = result.result.executed_qty;
+            document.getElementById("twap-res-price").textContent   = "$" + fmt(result.result.average_fill_price);
+            document.getElementById("twap-res-failed").textContent  = result.result.failed_intervals;
         }
     }
 
@@ -196,7 +220,7 @@
 
         const result = await API.startGrid(symbol, lower, upper, grids, qty);
         if (result.success) {
-            document.getElementById("grid-dot").className        = "status-dot running";
+            document.getElementById("grid-dot").className           = "status-dot running";
             document.getElementById("grid-status-text").textContent = "Running";
             info.textContent = result.message;
             showToast("Grid started!", "success");
@@ -208,13 +232,13 @@
 
     async function stopGrid() {
         const result = await API.stopGrid();
-        document.getElementById("grid-dot").className        = "status-dot stopped";
+        document.getElementById("grid-dot").className           = "status-dot stopped";
         document.getElementById("grid-status-text").textContent = "Stopped";
         showToast(result.message, result.success ? "success" : "error");
 
         const res = await API.gridResult();
         if (res.success) {
-            document.getElementById("grid-result").style.display  = "block";
+            document.getElementById("grid-result").style.display   = "block";
             document.getElementById("grid-res-trips").textContent  = res.result.round_trips;
             document.getElementById("grid-res-profit").textContent = "$" + fmt(res.result.estimated_profit_usdt);
         }

@@ -27,16 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitBtn = document.getElementById("submit-order");
     if (submitBtn) submitBtn.addEventListener("click", submitOrder);
 
-    // Load saved credentials
-    const keyInput    = document.getElementById("api-key-input");
-    const secretInput = document.getElementById("api-secret-input");
-    if (keyInput)    keyInput.value    = localStorage.getItem("api_key")    || "";
-    if (secretInput) secretInput.value = localStorage.getItem("api_secret") || "";
-
-    // Save creds on input
-    if (keyInput)    keyInput.addEventListener("input",    () => saveCreds(keyInput.value, secretInput?.value));
-    if (secretInput) secretInput.addEventListener("input", () => saveCreds(keyInput?.value, secretInput.value));
-
     showOrderForm("market");
     loadOpenOrders();
 });
@@ -73,15 +63,18 @@ async function submitOrder() {
             result      = await API.stopOrder(symbol, selectedSide, qty, stop, limit);
 
         } else if (selectedOrderType === "oco") {
-            const qty   = parseFloat(document.getElementById("qty-oco").value);
-            const tp    = parseFloat(document.getElementById("tp-price").value);
-            const stop  = parseFloat(document.getElementById("stop-price-oco").value);
-            const sl    = parseFloat(document.getElementById("sl-price").value);
-            result      = await API.ocoOrder(symbol, selectedSide, qty, tp, stop, sl);
+            const qty  = parseFloat(document.getElementById("qty-oco").value);
+            const tp   = parseFloat(document.getElementById("tp-price").value);
+            const stop = parseFloat(document.getElementById("stop-price-oco").value);
+            const sl   = parseFloat(document.getElementById("sl-price").value);
+            result     = await API.ocoOrder(symbol, selectedSide, qty, tp, stop, sl);
         }
 
         if (result?.success) {
-            showToast(`Order placed! ID: ${result.order?.orderId || result.order?.take_profit_order?.orderId}`, "success");
+            showToast(
+                `Order placed! ID: ${result.order?.orderId || result.order?.take_profit_order?.orderId}`,
+                "success"
+            );
             loadOpenOrders();
         } else {
             showToast(`Error: ${result?.detail || "Unknown error"}`, "error");

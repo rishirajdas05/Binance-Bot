@@ -12,6 +12,9 @@ function initChart(symbol = "BTCUSDT") {
 
     if (priceChart) priceChart.destroy();
 
+    priceLabels = [];
+    priceData   = [];
+
     priceChart = new Chart(ctx, {
         type: "line",
         data: {
@@ -51,7 +54,11 @@ function initChart(symbol = "BTCUSDT") {
 function connectPriceSocket(symbol = "BTCUSDT") {
     if (priceSocket) priceSocket.close();
 
-    priceSocket = new WebSocket(`wss://binance-bot-gwbg.onrender.com/ws/price/${symbol}`);
+    const wsUrl = window.location.hostname === "localhost"
+        ? `ws://localhost:8000/ws/price/${symbol}`
+        : `wss://binance-bot-gwbg.onrender.com/ws/price/${symbol}`;
+
+    priceSocket = new WebSocket(wsUrl);
 
     priceSocket.onmessage = (event) => {
         const data  = JSON.parse(event.data);
@@ -62,10 +69,14 @@ function connectPriceSocket(symbol = "BTCUSDT") {
         const display = document.getElementById("live-price");
         if (display) {
             const prev = parseFloat(display.dataset.prev || price);
-            display.textContent     = "$" + fmt(price);
-            display.dataset.prev    = price;
-            display.style.color     = price >= prev ? "#0ecb81" : "#f6465d";
+            display.textContent  = "$" + fmt(price);
+            display.dataset.prev = price;
+            display.style.color  = price >= prev ? "#0ecb81" : "#f6465d";
         }
+
+        // Update ticker symbol
+        const tickerSymbol = document.querySelector(".ticker-symbol");
+        if (tickerSymbol) tickerSymbol.textContent = symbol;
 
         // Update chart
         priceLabels.push(now);
@@ -83,4 +94,16 @@ function connectPriceSocket(symbol = "BTCUSDT") {
         console.warn("WebSocket error — retrying in 3s");
         setTimeout(() => connectPriceSocket(symbol), 3000);
     };
+
+    priceSocket.onclose = () => {
+        console.warn("WebSocket closed — retrying in 3s");
+        setTimeout(() => connectPriceSocket(symbol), 3000);
+    };
+}
+
+function changeSymbol(symbol) {
+    priceLabels = [];
+    priceData   = [];
+    initChart(symbol);
+    connectPriceSocket(symbol);
 }

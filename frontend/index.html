@@ -14,28 +14,44 @@
 <body>
 <div class="wrapper">
 
-    <!-- Sidebar -->
     <aside class="sidebar">
         <div class="logo">
             <img src="/static/logo.svg" alt="Binance Bot" style="width:160px;margin-bottom:4px;">
         </div>
-        <a href="/" class="nav-item active">
-            <span class="icon">&#9635;</span> Dashboard
-        </a>
-        <a href="/orders" class="nav-item">
-            <span class="icon">&#8645;</span> Orders
-        </a>
-        <a href="/strategies" class="nav-item">
-            <span class="icon">&#9881;</span> Strategies
-        </a>
-        <a href="/logs" class="nav-item">
-            <span class="icon">&#9776;</span> Logs
-        </a>
+        <a href="/"           class="nav-item active"><span class="icon">&#9635;</span> Dashboard</a>
+        <a href="/orders"     class="nav-item"><span class="icon">&#8645;</span> Orders</a>
+        <a href="/strategies" class="nav-item"><span class="icon">&#9881;</span> Strategies</a>
+        <a href="/logs"       class="nav-item"><span class="icon">&#9776;</span> Logs</a>
     </aside>
 
-    <!-- Main content -->
     <main class="main">
         <h2 style="margin-bottom:24px;">Dashboard</h2>
+
+        <!-- Symbol selector -->
+        <div class="card" style="padding:16px 24px;margin-bottom:16px;">
+            <div class="flex gap-16" style="align-items:center;">
+                <div class="form-group" style="margin:0;flex:0 0 200px;">
+                    <label style="margin-bottom:4px;">Symbol</label>
+                    <select id="symbol-select" onchange="changeSymbol(this.value)">
+                        <option value="BTCUSDT">BTC/USDT</option>
+                        <option value="ETHUSDT">ETH/USDT</option>
+                        <option value="BNBUSDT">BNB/USDT</option>
+                        <option value="SOLUSDT">SOL/USDT</option>
+                        <option value="XRPUSDT">XRP/USDT</option>
+                        <option value="DOGEUSDT">DOGE/USDT</option>
+                        <option value="ADAUSDT">ADA/USDT</option>
+                        <option value="AVAXUSDT">AVAX/USDT</option>
+                        <option value="DOTUSDT">DOT/USDT</option>
+                        <option value="MATICUSDT">MATIC/USDT</option>
+                        <option value="LINKUSDT">LINK/USDT</option>
+                        <option value="LTCUSDT">LTC/USDT</option>
+                        <option value="UNIUSDT">UNI/USDT</option>
+                        <option value="ATOMUSDT">ATOM/USDT</option>
+                        <option value="NEARUSDT">NEAR/USDT</option>
+                    </select>
+                </div>
+            </div>
+        </div>
 
         <!-- Ticker -->
         <div class="ticker">
@@ -75,7 +91,7 @@
 
         <!-- Price chart -->
         <div class="card">
-            <div class="card-title">BTC/USDT — Mark Price (Live)</div>
+            <div class="card-title">Mark Price (Live)</div>
             <div style="height: 300px;">
                 <canvas id="price-chart"></canvas>
             </div>

@@ -25,23 +25,30 @@
         <h2 style="margin-bottom:24px;">Place Orders</h2>
 
         <div class="grid-2">
-            <!-- Order form -->
             <div class="card">
                 <div class="card-title">New Order</div>
 
-                <!-- Symbol -->
                 <div class="form-group">
                     <label>Symbol</label>
                     <select id="symbol">
-                        <option>BTCUSDT</option>
-                        <option>ETHUSDT</option>
-                        <option>BNBUSDT</option>
-                        <option>SOLUSDT</option>
-                        <option>XRPUSDT</option>
+                        <option value="BTCUSDT">BTC/USDT</option>
+                        <option value="ETHUSDT">ETH/USDT</option>
+                        <option value="BNBUSDT">BNB/USDT</option>
+                        <option value="SOLUSDT">SOL/USDT</option>
+                        <option value="XRPUSDT">XRP/USDT</option>
+                        <option value="DOGEUSDT">DOGE/USDT</option>
+                        <option value="ADAUSDT">ADA/USDT</option>
+                        <option value="AVAXUSDT">AVAX/USDT</option>
+                        <option value="DOTUSDT">DOT/USDT</option>
+                        <option value="MATICUSDT">MATIC/USDT</option>
+                        <option value="LINKUSDT">LINK/USDT</option>
+                        <option value="LTCUSDT">LTC/USDT</option>
+                        <option value="UNIUSDT">UNI/USDT</option>
+                        <option value="ATOMUSDT">ATOM/USDT</option>
+                        <option value="NEARUSDT">NEAR/USDT</option>
                     </select>
                 </div>
 
-                <!-- Order type tabs -->
                 <div class="order-tabs">
                     <div class="order-tab active" data-type="market">Market</div>
                     <div class="order-tab"        data-type="limit">Limit</div>
@@ -49,7 +56,6 @@
                     <div class="order-tab"        data-type="oco">OCO</div>
                 </div>
 
-                <!-- BUY / SELL -->
                 <div class="side-selector">
                     <div class="side-btn buy active" data-side="BUY">BUY / LONG</div>
                     <div class="side-btn sell"       data-side="SELL">SELL / SHORT</div>

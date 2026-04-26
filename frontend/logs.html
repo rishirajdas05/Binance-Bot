@@ -37,7 +37,6 @@
                 </div>
             </div>
 
-            <!-- Filter buttons -->
             <div class="flex gap-8" style="margin-bottom:12px;">
                 <button class="btn btn-outline" onclick="filterLogs('ALL')"      style="padding:5px 12px;font-size:11px;">ALL</button>
                 <button class="btn btn-outline" onclick="filterLogs('INFO')"     style="padding:5px 12px;font-size:11px;color:var(--green);">INFO</button>
@@ -49,7 +48,6 @@
             <div class="log-box" id="log-box"></div>
         </div>
 
-        <!-- Legend -->
         <div class="card">
             <div class="card-title">Log Level Legend</div>
             <div class="flex gap-16" style="flex-wrap:wrap;">
@@ -70,15 +68,12 @@
     let activeFilter = "ALL";
 
     function filterLogs(level) {
-        activeFilter = level;
-        const box   = document.getElementById("log-box");
-        const lines = box.querySelectorAll(".log-line");
+        activeFilter    = level;
+        const box       = document.getElementById("log-box");
+        const lines     = box.querySelectorAll(".log-line");
         lines.forEach(line => {
-            if (level === "ALL" || line.classList.contains(level)) {
-                line.style.display = "block";
-            } else {
-                line.style.display = "none";
-            }
+            line.style.display = (level === "ALL" || line.classList.contains(level))
+                ? "block" : "none";
         });
     }
 </script>
