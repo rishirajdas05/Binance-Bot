@@ -1,8 +1,7 @@
 // api.js — All fetch calls to FastAPI backend
 // API keys are stored in .env on the server — not needed in frontend
 
-const API_BASE = "http://localhost:8000/api";
-
+const API_BASE = "https://binance-bot-gwbg.onrender.com/api";
 // Generic POST
 async function apiPost(endpoint, body = {}) {
     const res = await fetch(`${API_BASE}${endpoint}`, {

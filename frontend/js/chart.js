@@ -51,7 +51,7 @@ function initChart(symbol = "BTCUSDT") {
 function connectPriceSocket(symbol = "BTCUSDT") {
     if (priceSocket) priceSocket.close();
 
-    priceSocket = new WebSocket(`ws://localhost:8000/ws/price/${symbol}`);
+    priceSocket = new WebSocket(`wss://binance-bot-gwbg.onrender.com/ws/price/${symbol}`);
 
     priceSocket.onmessage = (event) => {
         const data  = JSON.parse(event.data);

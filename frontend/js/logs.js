@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function connectLogSocket() {
-    logSocket = new WebSocket("ws://localhost:8000/ws/logs");
+    logSocket = new WebSocket("wss://binance-bot-gwbg.onrender.com/ws/logs");
 
     logSocket.onmessage = (event) => {
         appendLog(event.data);
